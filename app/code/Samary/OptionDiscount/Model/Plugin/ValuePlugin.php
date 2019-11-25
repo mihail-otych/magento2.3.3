@@ -6,7 +6,7 @@
  * @description
  */
 
-namespace Samary\OptionDiscount\Model\Plugin;
+namespace Samary\OptionPercent\Model\Plugin;
 
 use Magento\Catalog\Model\Product\Option\Value;
 use Samary\OptionDiscount\Helper\Data;
