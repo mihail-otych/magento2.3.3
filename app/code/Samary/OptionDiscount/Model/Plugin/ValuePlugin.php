@@ -9,7 +9,7 @@
 namespace Samary\OptionPercent\Model\Plugin;
 
 use Magento\Catalog\Model\Product\Option\Value;
-use Samary\OptionDiscount\Helper\Data;
+use Samary\OptionPercent\Helper\Data;
 
 class ValuePlugin
 {
