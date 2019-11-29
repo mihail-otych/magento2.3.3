@@ -1,0 +1,247 @@
+//
+//  Toolbar
+//  ---------------------------------------------
+
+& when (@media-target = 'mobile') {
+    .toolbar {
+        .make-flex();
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-bottom: 30px;
+        background-color: @color-lightest;
+
+        .limiter, .sorter {
+            .make-flex();
+            align-items: center;
+            padding: 0;
+            box-sizing: border-box;
+
+            .label, .limiter-label {
+                margin-left: 12px;
+                margin-right: 10px;
+                color: @color-dark;
+                font-weight: 300;
+                line-height: 1;
+
+                &:after {
+                    content: ':';
+                }
+            }
+
+            select {
+                height: 40px;
+                border: none;
+                padding-left: 3px;
+                padding-right: 18px;
+                background-color: transparent;
+
+                &:hover, &:active {
+                    background-color: #ededed;
+                }
+
+                @media (min-width: @screen__s) {
+                    height: 50px;
+                    padding-left: 15px;
+                    padding-right: 30px;
+                    background-position: right 15px center;
+                }
+
+                @media (min-width: @screen__m) {
+                    min-width: 80px;
+                }
+            }
+
+            @media (max-width: (@screen__xs - 1)) {
+                .label {
+                    display: none;
+                }
+            }
+        }
+
+        .pages {
+            display: none;
+        }
+
+        @media (max-width: (@screen__m - 1)) {
+            .limiter {
+                margin-left: auto;
+            }
+        }
+
+        @media (max-width: 350px) {
+            .limiter {
+                flex-grow: 1;
+                margin-left: 0;
+
+                div.control {
+                    width: 100%;
+                    border-left: none;
+                }
+            }
+        }
+    }
+
+    //Sorter
+    .toolbar-sorter {
+        .sorter-action {
+            .font-icon(@themeicon-arrow-up);
+            border-right: 1px solid #dfdfdf;
+            width: 25px;
+            text-align: center;
+            color: @color-primary;
+
+            &:before {
+                font-size: 12px;
+                line-height: 40px;
+            }
+
+            @media (min-width: @screen__s) {
+                width: 50px;
+                &:before {
+                    font-size: 14px;
+                    line-height: 50px;
+                }
+            }
+
+            &:hover {
+                color: @color-dark;
+                background-color: #ededed;
+            }
+
+            span {
+                display: none;
+            }
+
+            &.sort-desc:before {
+                transform: rotate(180deg);
+            }
+        }
+
+        .control {
+            border-left: 1px solid #dfdfdf;
+            border-right: 1px solid #dfdfdf;
+        }
+    }
+
+    //Amount
+    .toolbar-amount {
+        text-align: center;
+        margin-top: 0;
+        margin-bottom: 0;
+        color: @color-primary;
+
+        @media (max-width: (@screen__m - 1)) {
+            * + & {
+                display: none;
+            }
+        }
+    }
+
+    //Limiter
+    div.limiter {
+        .limiter-text {
+            display: none;
+        }
+
+        select.limiter-options {
+            border-left: 1px solid #dfdfdf;
+        }
+    }
+
+    // Modes
+    .modes {
+        .make-flex();
+
+        .modes-label {
+            display: none;
+        }
+
+        .mode-grid {
+            .font-icon(@themeicon-icons2);
+        }
+
+        .mode-list {
+            .font-icon(@themeicon-list4);
+        }
+
+        .modes-mode {
+            display: block;
+            color: @color-default;
+            width: 34px;
+            border-left: 1px solid #dfdfdf;
+            text-align: center;
+
+            &:before {
+                display: block;
+                font-size: 16px;
+                line-height: 40px;
+            }
+
+            &.mode-list:before {
+                font-size: 18px;
+            }
+
+            @media (min-width: @screen__s) {
+                width: 50px;
+                &:before {
+                    font-size: 20px;
+                    line-height: 50px;
+                }
+
+                &.mode-list:before {
+                    font-size: 25px;
+                }
+            }
+
+            &.active {
+                color: @color-primary;
+            }
+
+            span {
+                display: none;
+            }
+        }
+
+        a.modes-mode:hover {
+            color: @color-dark;
+            background-color: #ededed;
+        }
+    }
+
+    .toolbar-bottom {
+        .pages {
+            display: block;
+        }
+
+        .toolbar-amount, .toolbar-sorter, .limiter, .modes {
+            display: none;
+        }
+
+        .toolbar {
+            margin-top: 40px;
+            margin-bottom: 0;
+            justify-content: center;
+        }
+    }
+
+    // RTL
+    html.rtl {
+        .toolbar {
+            .field {
+                .label {
+                    margin-right: 0;
+                    margin-left: 10px;
+                }
+            }
+        }
+    }
+}
+
+& when (@media-target = 'desktop') {
+    .toolbar {
+        * + .toolbar-amount {
+            flex-grow: 1;
+        }
+    }
+}

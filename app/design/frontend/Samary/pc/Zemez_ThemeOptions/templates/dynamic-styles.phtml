@@ -1,0 +1,629 @@
+<?php /**   */ ?>
+<?php
+$optionsHelper = $this->helper('Zemez\ThemeOptions\Helper\Data');
+?>
+
+<?php if($optionsHelper->getLogoType() == 'text'): ?>
+    /** Logo **/
+    <?php
+    $logoFontSize = $optionsHelper->getLogoFontSize();
+    $logoLineHeight = $optionsHelper->getLogoLineHeight();
+    $logoTextColor = $optionsHelper->getLogoTextColor();
+    ?>
+    .logo-text {
+        <?= $logoFontSize ? 'font-size: ' . $logoFontSize . 'px;' : '' ?>
+        <?= $logoLineHeight ? 'line-height: ' . $logoLineHeight . 'px;' : '' ?>
+        <?= $logoTextColor ? 'color: ' . $logoTextColor . ';' : '' ?>
+    }
+    <?php if($optionsHelper->isSlogan()): ?>
+        <?php
+        $sloganPosition = $optionsHelper->getSloganPosition();
+        $direction = 'row';
+        if ($sloganPosition == 'top') {
+            $direction = 'column-reverse';
+        } elseif($sloganPosition == 'bottom') {
+            $direction = 'column';
+        } elseif($sloganPosition == 'left') {
+            $direction = 'row-reverse';
+        }
+        $sloganFontSize = $optionsHelper->getSloganFontSize();
+        $sloganLineHeight = $optionsHelper->getSloganLineHeight();
+        $sloganTextColor = $optionsHelper->getSloganTextColor();
+        ?>
+        .logo {
+            display:flex;
+            flex-direction: <?= $direction; ?>;
+        }
+        .logo .slogan {
+            <?= $sloganFontSize ? 'font-size: ' . $sloganFontSize . 'px;' : '' ?>
+            <?= $sloganLineHeight ? 'line-height: ' . $sloganLineHeight . 'px;' : '' ?>
+            <?= $sloganTextColor ? 'color: ' . $sloganTextColor . ';' : '' ?>
+        }
+    <?php endif; ?>
+    /** end Logo **/
+<?php elseif($optionsHelper->getLogoType() == 'image'): ?>
+    /** Logo **/
+    <?php if($optionsHelper->isImageSlogan()): ?>
+        <?php
+        $imageSloganPosition = $optionsHelper->getImageSloganPosition();
+        $direction = 'row';
+        if ($imageSloganPosition == 'top') {
+            $direction = 'column-reverse';
+        } elseif ($imageSloganPosition == 'bottom') {
+            $direction = 'column';
+        } elseif ($imageSloganPosition == 'left') {
+            $direction = 'row-reverse';
+        }
+        $imageSloganFontSize = $optionsHelper->getImageSloganFontSize();
+        $imageSloganLineHeight = $optionsHelper->getImageSloganLineHeight();
+        $imageSloganTextColor = $optionsHelper->getImageSloganTextColor();
+        ?>
+        .logo {
+            display:flex;
+            flex-direction: <?= $direction; ?>;
+        }
+        .logo .slogan {
+            <?= $imageSloganFontSize ? 'font-size: ' . $imageSloganFontSize . 'px;' : '' ?>
+            <?= $imageSloganLineHeight ? 'line-height: ' . $imageSloganLineHeight . 'px;' : '' ?>
+            <?= $imageSloganTextColor ? 'color: ' . $imageSloganTextColor . ';' : '' ?>
+        }
+    <?php endif; ?>
+    /** end Logo **/
+<?php endif; ?>
+
+<?php if($optionsHelper->getColorSchemeStatus()): ?>
+    /** Primary Color **/
+    <?php if ($optionsHelper->getPrimaryColor()): ?>
+        /* put this selectors for primary color/background */
+        a:hover,
+        .alink:hover,
+        .abs-action-button-as-link:hover,
+        .abs-action-remove:hover,
+        .cart.table-wrapper .action.help.map:hover,
+        .opc-wrapper .edit-address-link:hover,
+        .opc-block-shipping-information .shipping-information-title .action-edit:hover,
+        .action-auth-toggle:hover,
+        .checkout-payment-method .checkout-billing-address .action-cancel:hover,
+        .checkout-agreements-block .action-show:hover,
+        .cart-summary .block.giftcard .action.check:hover,
+        .gift-options .actions-toolbar .action-cancel:hover,
+        .table-comparison .wishlist.split.button > .action:hover,
+        .product-items .wishlist.split.button > .action:hover,
+        .paypal-button-widget .paypal-button:hover,
+        .abs-add-fields .action.remove:hover,
+        .form-giftregistry-share .action.remove:hover,
+        .form-giftregistry-edit .action.remove:hover,
+        .form-add-invitations .action.remove:hover,
+        .form-create-return .action.remove:hover,
+        .form.send.friend .action.remove:hover,
+        .abs-action-button-as-link:hover,
+        .abs-action-remove:hover,
+        .cart.table-wrapper .action.help.map:hover,
+        .opc-wrapper .edit-address-link:hover,
+        .opc-block-shipping-information .shipping-information-title .action-edit:hover,
+        .action-auth-toggle:hover,
+        .checkout-payment-method .checkout-billing-address .action-cancel:hover,
+        .checkout-agreements-block .action-show:hover,
+        .cart-summary .block.giftcard .action.check:hover,
+        .gift-options .actions-toolbar .action-cancel:hover,
+        .table-comparison .wishlist.split.button > .action:hover,
+        .product-items .wishlist.split.button > .action:hover,
+        .paypal-button-widget .paypal-button:hover,
+        .abs-add-fields .action.remove:hover,
+        .form-giftregistry-share .action.remove:hover,
+        .form-giftregistry-edit .action.remove:hover,
+        .form-add-invitations .action.remove:hover,
+        .form-create-return .action.remove:hover,
+        .form.send.friend .action.remove:hover,
+        .message.info a:hover,
+        .message.info a:active,
+        .message.error a:hover,
+        .message.error a:active,
+        .message.warning a:hover,
+        .message.warning a:active,
+        .message.notice a:hover,
+        .message.notice a:active,
+        .message.success a:hover,
+        .message.success a:active,
+        .pages strong.page,
+        .pages .action:hover,
+        .pages .action.next:hover:before,
+        .pages .action.previous:hover:before,
+        .pages a.link:hover,
+        .breadcrumbs a,
+        .product-item .price-box,
+        .product-item .product-item-description a:hover,
+        .toolbar-sorter .sorter-action,
+        .toolbar-amount,
+        .modes .modes-mode.active,
+        .ui-dialog-titlebar-close:hover,
+        .ui-dialog-titlebar-close:hover,
+        button.map-show-info:hover,
+        .cart.table-wrapper .actions-toolbar > .action.map-show-info:hover,
+        .action-gift.map-show-info:hover,
+        button.map-show-info:hover,
+        .cart.table-wrapper .actions-toolbar > .action.map-show-info:hover,
+        .action-gift.map-show-info:hover,
+        .rating-summary .rating-result > span:before,
+        .review-control-vote label:before,
+        .message.global.noscript a:hover,
+        .message.global.cookie a:hover,
+        .message.global.demo a:hover,
+        .my-credit-cards .action.delete:hover,
+        .my-credit-cards .action.delete:hover,
+        .my-credit-cards-popup .action.secondary:hover,
+        .my-credit-cards-popup .action.secondary:hover,
+        .sidebar .block-wishlist .wishlist-counter span,
+        .block-wishlist .wishlist-counter span,
+        #search_mini_form .search-autocomplete .search-item .price-box,
+        .post-page .post-data,
+        .post-page .post-data .create-date a,
+        .post-page .post-data .post-author a,
+        .post-page .post-data .post-comments a,
+        .sidebar .block.block-brand .brand-item .brand-item-name a,
+        .brand-list .brand-item .brand-item-name a,
+        em,
+        .color-primary,
+        .owl-carousel div.owl-nav button.owl-prev:hover,
+        .owl-carousel div.owl-nav button.owl-next:hover,
+        .owl-carousel div.owl-nav .cart.table-wrapper .actions-toolbar > .action.owl-prev:hover,
+        .owl-carousel div.owl-nav .cart.table-wrapper .actions-toolbar > .action.owl-next:hover,
+        .owl-carousel div.owl-nav .action-gift.owl-prev:hover,
+        .owl-carousel div.owl-nav .action-gift.owl-next:hover,
+        .modal-custom .action-close:hover:before,
+        .modal-popup .action-close:hover:before,
+        .modal-slide .action-close:hover:before,
+        .modal-custom .action-close:focus:before,
+        .modal-popup .action-close:focus:before,
+        .modal-slide .action-close:focus:before,
+        .modal-custom .action-close:active:before,
+        .modal-popup .action-close:active:before,
+        .modal-slide .action-close:active:before,
+        .field.choice > input[type=checkbox] + .label:before,
+        .field.choice > input[type=radio] + .label:before,
+        .action-link:hover,
+        .product-details .box-tocart .fieldset,
+        .product-wrap .product.media .fotorama__arr:hover,
+        .product-wrap .product-info-stock-sku .available span,
+        .product-wrap .product-info-stock-sku > .product.attribute.sku .value,
+        .product-wrap .product-info-price .price-box,
+        .product-wrap .product-brand-name a:hover,
+        .catalog-product-view .product.data.items .additional-attributes .attributes-caption,
+        .block.related .block-actions .select,
+        .block.upsell .block-actions button.action.select,
+        .block.upsell .block-actions .cart.table-wrapper .actions-toolbar > .action.action.select,
+        .block.upsell .block-actions .action-gift.action.select,
+        .minicart-wrapper .action.showcart:before,
+        .minicart-wrapper .action.showcart:after,
+        .minicart-wrapper .action.showcart:hover:before,
+        .minicart-wrapper .action.showcart:hover:after,
+        .minicart-wrapper .block-minicart .action.close:hover,
+        .minicart-wrapper .block-minicart .minicart-items .product-item > .product .product-item-name a:hover,
+        .minicart-wrapper .block-minicart .minicart-items .product-item-pricing .minicart-price,
+        .minicart-wrapper .block-minicart .minicart-items .details-qty .update-cart-item,
+        .minicart-wrapper .block-minicart .minicart-items .product.actions a:hover:before,
+        #gift-options-cart .gift-options-title,
+        #shopping-cart-table .cart.item .product-item-details .product-item-name a:hover,
+        .cart-container .cart-summary .checkout.methods .item .action.multicheckout:hover,
+        .cart-container .cart-summary .block .title[role="tab"],
+        .opc-progress-bar .opc-progress-bar-item,
+        #opc-sidebar .items-in-cart > .title span:first-child,
+        .table-checkout-shipping-method td:first-child span.radio:before,
+        .field.required .control div.field-tooltip.toggle._active .field-tooltip-action:before,
+        ._keyfocus .field.required .control div.field-tooltip.toggle .field-tooltip-action:focus:before,
+        #checkout-step-payment input[name="billing-address-same-as-shipping"] + label span:before,
+        #checkout-step-payment .discount-code .payment-option-title,
+        .sidebar .account-navigation li.current strong,
+        .sidebar .account-navigation a,
+        .block-dashboard-info .box-title,
+        .block-dashboard-addresses .box-title,
+        .box-billing-address .box-title,
+        .box-address-shipping .box-title,
+        .block-dashboard-info .box-actions .action.edit:hover,
+        .block-dashboard-addresses .box-actions .action.edit:hover,
+        .box-billing-address .box-actions .action.edit:hover,
+        .box-address-shipping .box-actions .action.edit:hover,
+        .block-addresses-list .block-content .action.edit:hover,
+        .block-addresses-list .block-content .action.delete:hover,
+        .popup-authentication .block-title,
+        .account-nav .account-nav-content .item a:hover,
+        .account-nav .account-nav-content .item.current,
+        .page-product-downloadable .page-main .product-options-wrapper .legend,
+        .page-product-grouped .table.grouped .table-caption,
+        .filter-current--wrapper,
+        .filter-options .filter-options-content .item a:hover,
+        .filter-options .filter-options-content .count,
+        .review-control-vote label:before,
+        #cart-sidebar-reorder .product-item-link:hover,
+        #cart-sidebar-reorder .control .label:before,
+        .block-search form button.action.search:hover,
+        .block-search form .cart.table-wrapper .actions-toolbar > .action.action.search:hover,
+        .block-search form .action-gift.action.search:hover,
+        .cms-about-us .skills .value,
+        .about-us_services .about-us_services_txt i,
+        .contact-index-index .contact-us-info .contact-us-info-description:not(.contact-us-info-description-email) a:hover,
+        .form.search.advanced legend.legend,
+        .sales-guest-form .admin__legend,
+        .shipping-delivery-page ul li:before,
+        .shipping-delivery-page [class*='themeicon-']:before,
+        .faq-page #faq-accordion .accordion-content p:before,
+        .support-page .boxes-block li div span:before,
+        .guarantee-page h4:before,
+        .terms-conditions-page ul h4:before,
+        .abs-actions-addto-gridlist:hover:before,
+        .table-comparison .wishlist.split.button > .action.split:hover:before,
+        .product-items .wishlist.split.button > .action.split:hover:before,
+        .product-items .action.towishlist:hover:before,
+        .products.list.items .action.towishlist:hover:before,
+        .table-comparison .action.towishlist:hover:before,
+        .product-addto-links .action.towishlist:hover:before,
+        .product-items .action.tocompare:hover:before,
+        .products.list.items .action.tocompare:hover:before,
+        .table-comparison .action.tocompare:hover:before,
+        .product-addto-links .action.tocompare:hover:before,
+        .product-wrap .product-social-links .action:hover:before,
+        .page-footer .footer-col .footer-col-content li strong,
+        .block-posts-list .post-items a.post-link:hover,
+        .block-posts-list .post-items .post-data .post-comments a:hover,
+        .post-page .post-author span,
+        .post-page .post-data .post-comments a:hover,
+        .post-page .post-comments-block .comment-add .post-comments-title,
+        .block.related-posts .related-post-grid .post-title > a:hover,
+        .post-item time,
+        .post-comments,
+        .sp-arrow:hover,
+        .slider-title a:hover,
+        .slider-title a:focus,
+        .brand-list .brand-item .brand-item-name a,
+        .sidebar .block.block-brand .brand-item .brand-item-name a,
+        .sm-wrapper .sm-main #sm-content-block .sm-title,
+        .sm-wrapper .sm-main #sm-timer-block .sm-timer-wrapper,
+        nav.tm-navigation .ui-menu.megamenu-wrapper .level1 > li > a:hover,
+        .sm-header_customer-menu-container > .ui-dialog a:hover,
+        .sm-header_customer-menu-toggle:hover:before,
+        .sm-header_customer-menu-toggle:hover:after,
+        .customer-account .customer-name,
+        .block-search .label:hover:before,
+        .block-search .label:hover:after,
+        .block-search #search_mini_form .field.search .close:hover,
+        .block-search #search_mini_form .action.search:hover,
+        .page-header .switcher .options .action.toggle.active,
+        .page-header .switcher .options .action.toggle:hover {
+            color: <?= $optionsHelper->getPrimaryColor(); ?>;
+        }
+
+        mark,
+        button,
+        .cart.table-wrapper .actions-toolbar > .action,
+        .action-gift,
+        .abs-action-addto-product,
+        .block-event .slider-panel .slider .item .action.event,
+        .bundle-options-container .block-bundle-summary .product-addto-links > .action,
+        .product-info-main .action.tocompare,
+        .product-options-bottom .action.tocompare,
+        .product-info-main .action.towishlist,
+        .product-options-bottom .action.towishlist,
+        .block-bundle-summary .action.towishlist,
+        .block-compare .action.compare,
+        .cart-summary .actions-toolbar > .primary button,
+        .cart-summary .form.giftregistry .fieldset .action.primary,
+        .paypal-review .block .actions-toolbar .action.primary,
+        .cart-summary .actions-toolbar > .primary .cart.table-wrapper .actions-toolbar > .action,
+        .cart-summary .actions-toolbar > .primary .action-gift,
+        .block-cart-failed .action.continue,
+        .cart-container .form-cart .action.continue,
+        .gift-item-block .title,
+        .review-form .action.submit.primary,
+        .search-autocomplete ul li:hover,
+        .search-autocomplete ul li.selected,
+        .featured .product-label,
+        .block.featured.column-products .product-item-actions .actions-secondary .action:hover,
+        nav.tm-navigation .mm-label,
+        .scrollToTop,
+        body .bg-primary,
+        .action.default,
+        .action.default:hover,
+        .minicart-wrapper .action.showcart .counter.qty,
+        #gift-options-cart .gift-options .actions-toolbar .secondary .action-cancel,
+        #shopping-cart-table .cart.item .actions-toolbar .gift-content .actions-toolbar .action,
+        .opc-progress-bar .opc-progress-bar-item._active > span:before,
+        .checkout-container .authentication-wrapper button.action-auth-toggle,
+        .checkout-container .authentication-wrapper .cart.table-wrapper .actions-toolbar > .action.action-auth-toggle,
+        .checkout-container .authentication-wrapper .action-gift.action-auth-toggle,
+        body.account .box a.action:hover,
+        .sidebar .price-slider .ui-slider-handle,
+        .sidebar .price-slider .ui-slider-range,
+        .faq-page #faq-accordion .accordion-trigger:before,
+        .support-page .boxes-block li div:hover,
+        .slider-pro .btn,
+        .sm-wrapper .sm-main #sm-subscription-block .sm-content .sm-button {
+            background-color: <?= $optionsHelper->getPrimaryColor(); ?>;
+        }
+
+        .product-item .fotorama__thumb-border,
+        .css3-loader,
+        .swatch-attribute [class*="swatch-opt"] .swatch-option.image:hover,
+        [class*="swatch-opt"] .swatch-attribute .swatch-option.image:hover,
+        .swatch-attribute [class*="swatch-opt"] .swatch-option.image.selected,
+        [class*="swatch-opt"] .swatch-attribute .swatch-option.image.selected,
+        .swatch-attribute [class*="swatch-opt"] .swatch-option.image:not(.disabled):hover,
+        [class*="swatch-opt"] .swatch-attribute .swatch-option.image:not(.disabled):hover,
+        .support-page .boxes-block li div,
+        .sp-button:hover {
+            border-color: <?= $optionsHelper->getPrimaryColor(); ?>;
+        }
+
+        nav.tm-navigation .mm-label:before {
+            border-color: <?= $optionsHelper->getPrimaryColor(); ?> transparent transparent transparent;
+        }
+
+        nav.tm-navigation .mm-label:after {
+            border-color: transparent transparent transparent <?= $optionsHelper->getPrimaryColor(); ?>;
+        }
+
+        .sp-selected-button {
+            background-color: <?= $optionsHelper->getPrimaryColor(); ?>;
+            border-color: <?= $optionsHelper->getPrimaryColor(); ?>;
+        }
+
+        @media only screen and (max-width: 767px) {
+            .sm-header-panel-canvas {
+                background: <?= $optionsHelper->getPrimaryColor(); ?>;
+            }
+
+            .sm-header_customer-menu-container .mage-dropdown-dialog .switcher .action.switcher-trigger:hover,
+            .sm-header_customer-menu-container .mage-dropdown-dialog .switcher .mage-dropdown-dialog a:hover,
+            .opc-estimated-wrapper .estimated-price {
+                color: <?= $optionsHelper->getPrimaryColor(); ?>;
+            }
+        }
+
+
+        @media all and (min-width: 640px) {
+            .column .block-addbysku .action.remove:hover,
+            .column .block-addbysku .action.remove:hover {
+                color: <?= $optionsHelper->getPrimaryColor(); ?>;
+            }
+        }
+
+
+        @media (min-width: 1024px) {
+            .slider-pro .btn-primary:hover {
+                background: <?= $optionsHelper->getPrimaryColor(); ?>;
+            }
+        }
+
+        @media all and (min-width: 768px), print {
+            .navigation .level0 .submenu a:hover,
+            .navigation .level0 .submenu a.ui-state-focus,
+            .navigation .level0 .submenu a.ui-state-active {
+                color: <?= $optionsHelper->getPrimaryColor(); ?>;
+            }
+
+            .navigation .level0 > .level-top:before {
+                border-bottom: 3px solid <?= $optionsHelper->getPrimaryColor(); ?>;
+            }
+        }
+    <?php endif; ?>
+    /**/
+
+    /** Secondary Color **/
+    <?php if ($optionsHelper->getSecondaryColor()): ?>
+        /* put this selectors for secondary color/background */
+        .product-item .price-box .special-price,
+        .search-autocomplete,
+        #search_mini_form .search-autocomplete .search-item .price-box .special-price,
+        .product-details .box-tocart .fieldset .special-price,
+        .block-compare .action.delete:hover:before,
+        .product-wrap .product-info-price .price-box .special-price,
+        .minicart-wrapper .block-minicart .block-content > .subtotal .amount,
+        .filter-current--wrapper .filter-current .item .action.remove:hover,
+        .filter-current--wrapper .filter-clear {
+            color: <?= $optionsHelper->getSecondaryColor(); ?>;
+        }
+
+        button:focus,
+        button:active,
+        .cart.table-wrapper .actions-toolbar > .action:focus,
+        .cart.table-wrapper .actions-toolbar > .action:active,
+        .action-gift:focus,
+        .action-gift:active,
+        button:hover,
+        .cart.table-wrapper .actions-toolbar > .action:hover,
+        .action-gift:hover,
+        .abs-action-link-button:focus,
+        .abs-action-link-button:active,
+        .abs-action-addto-product:focus,
+        .abs-action-addto-product:active,
+        .block-event .slider-panel .slider .item .action.event:focus,
+        .block-event .slider-panel .slider .item .action.event:active,
+        .bundle-options-container .block-bundle-summary .product-addto-links > .action:focus,
+        .bundle-options-container .block-bundle-summary .product-addto-links > .action:active,
+        .product-info-main .action.tocompare:focus,
+        .product-info-main .action.tocompare:active,
+        .product-options-bottom .action.tocompare:focus,
+        .product-options-bottom .action.tocompare:active,
+        .product-info-main .action.towishlist:focus,
+        .product-info-main .action.towishlist:active,
+        .product-options-bottom .action.towishlist:focus,
+        .product-options-bottom .action.towishlist:active,
+        .block-bundle-summary .action.towishlist:focus,
+        .block-bundle-summary .action.towishlist:active,
+        .abs-action-link-button:hover,
+        .abs-action-addto-product:hover,
+        .block-event .slider-panel .slider .item .action.event:hover,
+        .bundle-options-container .block-bundle-summary .product-addto-links > .action:hover,
+        .product-info-main .action.tocompare:hover,
+        .product-options-bottom .action.tocompare:hover,
+        .product-info-main .action.towishlist:hover,
+        .product-options-bottom .action.towishlist:hover,
+        .block-bundle-summary .action.towishlist:hover,
+        .abs-revert-secondary-color:focus,
+        .abs-revert-secondary-color:active,
+        .block-compare .action.compare:focus,
+        .block-compare .action.compare:active,
+        .cart-summary .actions-toolbar > .primary button:focus,
+        .cart-summary .actions-toolbar > .primary button:active,
+        .cart-summary .form.giftregistry .fieldset .action.primary:focus,
+        .cart-summary .form.giftregistry .fieldset .action.primary:active,
+        .paypal-review .block .actions-toolbar .action.primary:focus,
+        .paypal-review .block .actions-toolbar .action.primary:active,
+        .cart-summary .actions-toolbar > .primary .cart.table-wrapper .actions-toolbar > .action:focus,
+        .cart-summary .actions-toolbar > .primary .cart.table-wrapper .actions-toolbar > .action:active,
+        .cart-summary .actions-toolbar > .primary .action-gift:focus,
+        .cart-summary .actions-toolbar > .primary .action-gift:active,
+        .abs-revert-secondary-color:hover,
+        .block-compare .action.compare:hover,
+        .cart-summary .actions-toolbar > .primary button:hover,
+        .cart-summary .form.giftregistry .fieldset .action.primary:hover,
+        .paypal-review .block .actions-toolbar .action.primary:hover,
+        .cart-summary .actions-toolbar > .primary .cart.table-wrapper .actions-toolbar > .action:hover,
+        .cart-summary .actions-toolbar > .primary .action-gift:hover,
+        .abs-shopping-cart-items .action.continue:focus,
+        .abs-shopping-cart-items .action.continue:active,
+        .block-cart-failed .action.continue:focus,
+        .block-cart-failed .action.continue:active,
+        .cart-container .form-cart .action.continue:focus,
+        .cart-container .form-cart .action.continue:active,
+        .abs-shopping-cart-items .action.continue:hover,
+        .block-cart-failed .action.continue:hover,
+        .cart-container .form-cart .action.continue:hover,
+        .action.primary,
+        .action.primary:hover,
+        .gift-item-block .title:focus,
+        .gift-item-block .title:active,
+        .gift-item-block .title:hover,
+        .review-form .action.submit.primary:focus,
+        .review-form .action.submit.primary:active,
+        .review-form .action.submit.primary:hover,
+        .featured .product-label.bg-secondary,
+        .block.featured.column-products .product-item-actions .action.tocart:hover,
+        nav.tm-navigation a.sale .mm-label,
+        .scrollToTop:hover,
+        .block-event .slider-panel .slider .item .action.event,
+        .block-event .slider-panel .slider .item .action.event:hover,
+        body .bg-secondary,
+        .action.default:focus,
+        .action.default:active,
+        .action.default:hover,
+        .action.default:before,
+        #gift-options-cart .gift-options .actions-toolbar .secondary .action-cancel:focus,
+        #gift-options-cart .gift-options .actions-toolbar .secondary .action-cancel:active,
+        #gift-options-cart .gift-options .actions-toolbar .secondary .action-cancel:hover,
+        #shopping-cart-table .cart.item .actions-toolbar .gift-content .actions-toolbar .action:focus,
+        #shopping-cart-table .cart.item .actions-toolbar .gift-content .actions-toolbar .action:active,
+        #shopping-cart-table .cart.item .actions-toolbar .gift-content .actions-toolbar .action:hover,
+        .cart-container .cart-summary .block.discount button.apply,
+        .cart-container .cart-summary .block.discount .cart.table-wrapper .actions-toolbar > .action.apply,
+        .cart-container .cart-summary .block.discount .action-gift.apply,
+        .cart-container .cart-summary .block.discount button.apply:hover,
+        .cart-container .cart-summary .block.discount .cart.table-wrapper .actions-toolbar > .action.apply:hover,
+        .cart-container .cart-summary .block.discount .action-gift.apply:hover,
+        .slider-pro .btn:focus,
+        .slider-pro .btn:active,
+        .slider-pro .btn:hover,
+        .slider-pro .btn-primary,
+        .slider-pro .btn-primary:hover,
+        .smart-label,
+        .sm-wrapper .sm-main #sm-subscription-block .sm-content .sm-button,
+        .sm-wrapper .sm-main #sm-subscription-block .sm-content .sm-button:focus,
+        .sm-wrapper .sm-main #sm-subscription-block .sm-content .sm-button:active,
+        .sm-wrapper .sm-main #sm-subscription-block .sm-content .sm-button:hover,
+        .sm-wrapper .sm-main #sm-subscription-block .sm-content .sm-button:hover {
+            background-color: <?= $optionsHelper->getSecondaryColor(); ?>;
+        }
+
+        nav.tm-navigation a.sale .mm-label:before {
+            border-color: <?= $optionsHelper->getSecondaryColor(); ?> transparent transparent transparent;
+        }
+
+        nav.tm-navigation a.sale .mm-label:after {
+            border-color: transparent transparent transparent <?= $optionsHelper->getSecondaryColor(); ?>;
+        }
+
+        @media only screen and (max-width: 767px) {
+            .navigation .level0.active .all-category .ui-state-focus,
+            .navigation .level0.active > a:not(.ui-state-active),
+            .navigation .level0.has-active > a:not(.ui-state-active) {
+                border-color: <?= $optionsHelper->getSecondaryColor(); ?>;
+            }
+        }
+    <?php endif; ?>
+    /**/
+
+    <?php if ($optionsHelper->getBodyBackgroundColor()): ?>
+        body, .page-header__panel {
+            background-color: <?= $optionsHelper->getBodyBackgroundColor(); ?>;
+        }
+    <?php endif; ?>
+    <?php if ($optionsHelper->isBodyBackgroundImage()) : ?>
+        body {
+            background-image: <?= $optionsHelper->getBodyBackgroundImage() ? 'url(' . $this->getBaseUrl() . 'pub/media/theme_options/' . $optionsHelper->getBodyBackgroundImage() . ')' : 'none' ?>;
+            background-size: <?= $optionsHelper->getBodyBackgroundImageSize(); ?>;
+            background-attachment: <?= $optionsHelper->getBodyBackgroundImageAttachment(); ?>;
+            background-position: <?= $optionsHelper->getBodyBackgroundImagePosition(); ?>;
+            background-repeat: <?= $optionsHelper->getBodyBackgroundImageRepeat(); ?>;
+        }
+    <?php endif; ?>
+
+    <?php if ($optionsHelper->getHeaderBackgroundColor()): ?>
+        header.page-header .sm-header-nav-wrap {
+            background-color: <?= $optionsHelper->getHeaderBackgroundColor(); ?>;
+        }
+    <?php endif; ?>
+
+    <?php if ($optionsHelper->isHeaderBackgroundImage()) : ?>
+        header.page-header .sm-header-nav-wrap {
+            background-image: <?= $optionsHelper->getHeaderBackgroundImage() ? 'url(' . $this->getBaseUrl() . 'pub/media/theme_options/' . $optionsHelper->getHeaderBackgroundImage() . ')' : 'none' ?>;
+            background-size: <?= $optionsHelper->getHeaderBackgroundImageSize(); ?>;
+            background-attachment: <?= $optionsHelper->getHeaderBackgroundImageAttachment(); ?>;
+            background-position: <?= $optionsHelper->getHeaderBackgroundImagePosition(); ?>;
+            background-repeat: <?= $optionsHelper->getHeaderBackgroundImageRepeat(); ?>;
+        }
+    <?php endif; ?>
+
+
+    <?php if ($optionsHelper->getFooterBackgroundColor()): ?>
+        .page-footer {
+            background-color: <?= $optionsHelper->getFooterBackgroundColor(); ?>;
+        }
+    <?php endif; ?>
+
+    <?php if ($optionsHelper->isFooterBackgroundImage()) : ?>
+        .page-footer {
+            background-image: <?= $optionsHelper->getFooterBackgroundImage() ? 'url(' . $this->getBaseUrl() . 'pub/media/theme_options/' . $optionsHelper->getFooterBackgroundImage() . ')' : 'none' ?>;
+            background-size: <?= $optionsHelper->getFooterBackgroundImageSize(); ?>;
+            background-attachment: <?= $optionsHelper->getFooterBackgroundImageAttachment(); ?>;
+            background-position: <?= $optionsHelper->getFooterBackgroundImagePosition(); ?>;
+            background-repeat: <?= $optionsHelper->getFooterBackgroundImageRepeat(); ?>;
+        }
+    <?php endif; ?>
+
+    <?php if ($optionsHelper->getPrimaryFontColor()): ?>
+        body {
+            color: <?= $optionsHelper->getPrimaryFontColor(); ?>;
+        }
+    <?php endif; ?>
+
+    <?php if ($optionsHelper->getPrimaryLinkColor()): ?>
+        a {
+            color: <?= $optionsHelper->getPrimaryLinkColor(); ?>;
+        }
+    <?php endif; ?>
+<?php endif; ?>
+
+/* Category page */
+<?php if ($columns = $optionsHelper->getProductItemWidth()): ?>
+    @media screen and (min-width: 1024px) {
+        .grid-main .products-grid .product-item{
+            flex-basis: <?= $columns; ?>;
+            max-width: <?= $columns; ?>;
+        }
+    }
+<?php endif; ?>
+<?php if ($optionsHelper->isTiltJs()): ?>
+    .js-tilt-glare {
+        pointer-events: none;
+    }
+<?php endif ?>
+/* END Category page */

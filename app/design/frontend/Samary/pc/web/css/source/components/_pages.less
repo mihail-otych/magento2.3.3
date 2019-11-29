@@ -1,0 +1,65 @@
+//
+//  Pages
+//  _____________________________________________
+
+.lib-pager() {
+    a, strong {
+        box-sizing: border-box;
+        text-align: center;
+        .lib-css(border-radius, @pager__border-radius);
+        &.page {
+            .lib-css(min-width, @pager-item__width);
+        }
+    }
+
+    a.link {
+        display: inline-block;
+        .lib-css(color, @pager-action__color);
+        .lib-css(border, @pager-action__border);
+        .lib-css(background, @pager-action__background);
+        .lib-css(padding, @pager-actions__padding);
+        &:hover {
+            .lib-css(color, @pager-action__hover__color);
+            .lib-css(border, @pager-action__hover__border);
+            .lib-css(background, @pager-action__hover__background);
+        }
+    }
+
+    .item {
+        //&:hover, &:active {
+        //    background-color: #ededed;
+        //}
+        border-right: 1px solid #dfdfdf;
+
+        &:last-child {
+            margin-right: 0;
+        }
+        .action {
+            .lib-css(width, @pager-action__width);
+            &:before {
+                transition: 0.3s all ease;
+            }
+            &.next, &.previous {
+                margin: 0;
+            }
+        }
+
+        strong.action {
+            &:before {
+                opacity: 0.3;
+            }
+            &:hover:before {
+                color: @pager-action__color;
+            }
+        }
+    }
+
+    .pages-item-previous {
+        margin-right: @pager-action__spacing;
+    }
+
+    .pages-item-next {
+        margin-left: @pager-action__spacing - @pager-item__spacing;
+        border-right: none;
+    }
+}

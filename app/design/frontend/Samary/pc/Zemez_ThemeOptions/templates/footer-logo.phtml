@@ -1,0 +1,44 @@
+<?php
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+
+/**
+ * @var \Magento\Theme\Block\Html\Header\Logo $block
+ */
+$optionsHelper = $this->helper('Zemez\ThemeOptions\Helper\Data');
+?>
+<?php $storeName = $block->getThemeName() ? $block->getThemeName() : $block->getLogoAlt();?>
+<?php if ($block->isHomePage()):?>
+    <strong class="logo">
+<?php else: ?>
+    <a class="logo" href="<?= $block->getUrl('') ?>" title="<?= /* @escapeNotVerified */ $storeName ?>">
+<?php endif ?>
+        <?php if($optionsHelper->getLogoType() == 'image'): ?>
+            <img src="<?= /* @escapeNotVerified */ $block->getLogoSrc() ?>"
+                 title="<?= /* @escapeNotVerified */ $block->getLogoAlt() ?>"
+                 alt="<?= /* @escapeNotVerified */ $block->getLogoAlt() ?>"
+                <?= $block->getLogoWidth() ? 'width="' . $block->getLogoWidth() . '"' : '' ?>
+                <?= $block->getLogoHeight() ? 'height="' . $block->getLogoHeight() . '"' : '' ?>
+            />
+            <?php if($optionsHelper->isImageSlogan()): ?>
+                <span class="slogan <?= $optionsHelper->getImageSloganPosition(); ?>">
+                    <?= $optionsHelper->getImageSloganText(); ?>
+                </span>
+            <?php endif; ?>
+        <?php else:?>
+            <span class="logo-text"><?= $optionsHelper->getLogoText(); ?></span>
+            <?php if($optionsHelper->isSlogan()): ?>
+                <strong class="slogan <?= $optionsHelper->getSloganPosition(); ?>">
+                    <?= $optionsHelper->getSloganText(); ?>
+                </strong>
+            <?php endif; ?>
+        <?php endif?>
+<?php if ($block->isHomePage()):?>
+    </strong>
+<?php else:?>
+    </a>
+<?php endif?>

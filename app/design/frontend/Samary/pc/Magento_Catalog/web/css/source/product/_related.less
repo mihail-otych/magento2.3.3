@@ -1,0 +1,39 @@
+//
+//  Related product
+//  ---------------------------------------------
+
+& when (@media-target = 'mobile') {
+    .block.related {
+        position: relative;
+
+        .title {
+            text-align: center;
+            strong {
+                margin-top: 0;
+            }
+        }
+
+        .block-actions .select {
+            padding: 0;
+            line-height: 1;
+            background: transparent;
+            color: @color-primary;
+            &:hover {
+                color: @color-light;
+            }
+        }
+    }
+}
+
+& when (@media-target = 'desktop') {
+    .block.related {
+        .grid.products-grid .owl-carousel {
+            .owl-item {
+                padding-bottom: 80px;
+            }
+            .owl-stage-outer {
+                margin-bottom: -80px;
+            }
+        }
+    }
+}

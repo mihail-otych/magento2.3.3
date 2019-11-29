@@ -1,0 +1,225 @@
+//
+//  Navigation
+//  _____________________________________________
+
+.lib-main-navigation-desktop() {
+    .navigation {
+        position: static;
+
+        > ul {
+            margin-left: -@navigation-desktop-level0-item__offset;
+        }
+
+        @media (min-width: @screen__xl) {
+            > ul {
+                margin-left: -48px;
+            }
+
+            .level0 {
+                margin-left: 48px;
+            }
+        }
+
+        .level0 {
+            > .level-top {
+                .lib-css(font-size, @navigation-desktop-level0-item__font-size);
+                .lib-css(font-weight, @navigation-desktop-level0-item__font-weight);
+                text-transform: uppercase;
+
+                @media (min-width: @screen__xl) {
+                    font-size: 18px;
+                }
+
+                &:before {
+                    content: '';
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+                    width: 0;
+                    border-bottom: 3px solid @color-primary;
+                    transition: 0.3s all ease;
+                }
+
+                &:hover, &.ui-state-active, &.ui-state-focus {
+                    &:before {
+                        width: 100%;
+                    }
+                }
+
+                &.ui-state-active {
+                    .lib-css(background, @navigation-desktop-level0-item__hover__background);
+                    .lib-css(border, @navigation-desktop-level0-item__hover__border);
+                    .lib-css(color, @navigation-desktop-level0-item__hover__color);
+                }
+            }
+
+            &.parent {
+                > .level-top {
+                    padding-right: 15px;
+
+                    > .ui-menu-icon {
+                        right: 0;
+                        line-height: 0;
+
+                        &:after {
+                            .font-icon__pseudo(@themeicon-chevron-down);
+                            font-size: 10px;
+                            line-height: 1.5;
+                        }
+                    }
+
+                    @media (min-width: @screen__xl) {
+                        padding-right: 19px;
+                        > .ui-menu-icon {
+                            right: -3px;
+
+                            &:after {
+                                font-size: 12px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .submenu {
+                padding: @submenu-desktop__padding;
+
+                .submenu {
+                    margin-top: -9px !important;
+                }
+
+                .static-block a {
+                    padding: 0;
+                    text-transform: none;
+                }
+
+                .banner {
+                    margin-bottom: 0;
+                }
+
+                a {
+                    text-transform: uppercase;
+
+                    &.ui-state-active {
+                        .lib-css(background, @submenu-desktop-item__hover__background);
+                        .lib-css(border, @submenu-desktop-item__hover__border);
+                        .lib-css(color, @submenu-desktop-item__hover__color);
+                    }
+                }
+
+                li {
+                    &.parent {
+                        > a {
+                            > .ui-menu-icon {
+                                right: 14px;
+                                transition: 0.3s right ease;
+
+                                &:after {
+                                    .font-icon__pseudo(@themeicon-chevron-right);
+                                    font-size: 10px;
+                                    line-height: 1;
+                                    vertical-align: baseline;
+                                }
+                            }
+
+                            &.ui-state-focus, &.ui-state-active {
+                                > .ui-menu-icon {
+                                    right: 9px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    nav.navigation {
+        ul {
+            padding-top: 10px;
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+}
+
+
+& when (@media-target = 'mobile') {
+    .sm-header-nav-wrap {
+        padding: 23px 15px 10px;
+    }
+
+    @media (max-width: (@screen__m - 1)) {
+        .sm-header-nav-wrap {
+            text-align: center;
+        }
+
+        // Mobile navigation
+        .navigation {
+            .level0:first-child {
+                border-top: none;
+            }
+
+            .submenu:not(:first-child) {
+                padding-top: 5px;
+                padding-bottom: 5px;
+
+                > li > a {
+                    padding-left: 30px;
+                }
+            }
+        }
+
+        // RTL
+        html.rtl {
+            .navigation {
+                .submenu:not(:first-child) {
+                    > li > a {
+                        padding-left: 0;
+                        padding-right: 30px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+& when (@media-target = 'desktop') {
+    .sm-header-nav-wrap {
+        position: relative;
+        .make-flex();
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        background-color: @color-white;
+        @media (min-width: @screen__l) {
+            padding-left: 2%;
+            padding-right: 2%;
+        }
+    }
+
+    nav.navigation {
+        width: auto;
+    }
+
+    @media (max-width: (@screen__l - 1)) {
+        nav.navigation {
+            order: 1;
+            flex-grow: 1;
+            min-width: 100%;
+            margin-top: 10px;
+            margin-left: -15px;
+            margin-right: -15px;
+            text-align: center;
+            border-top: 1px solid @border-color__base;
+        }
+
+        .page-header .logo {
+            margin-right: auto;
+        }
+    }
+
+    // RTL
+    html.rtl {
+
+    }
+}

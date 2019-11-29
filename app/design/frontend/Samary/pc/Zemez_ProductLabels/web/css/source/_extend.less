@@ -1,0 +1,39 @@
+& when (@media-target = 'mobile') {
+    .smart-label {
+        display: inline-block;
+        position: absolute;
+        overflow: hidden;
+        box-sizing: border-box;
+        z-index: 10;
+        padding: 1px 7px;
+        margin-top: 10px;
+        margin-left: 6px;
+        font-size: 12px;
+        line-height: 1.2;
+        text-transform: uppercase;
+        color: @color-white;
+        background-color: @color-secondary;
+
+        & + .smart-label {
+            margin-top: 34px;
+        }
+    }
+
+    .product-wrap .smart-label {
+        margin-top: 10px;
+    }
+
+    .list.products-list {
+        .smart-label {
+            margin-left: -5px;
+        }
+    }
+}
+
+& when (@media-target = 'desktop') {
+    @media (min-width: @screen__l) {
+        .product-wrap .smart-label {
+            margin-left: 96px;
+        }
+    }
+}

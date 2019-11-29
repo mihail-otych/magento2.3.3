@@ -1,0 +1,79 @@
+<?php
+/**
+ * Copyright © 2016 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+
+/**
+ * Product media data template
+ *
+ * @var $block \Zemez\FeaturedProduct\Block\Product\View\Gallery
+ */
+
+$slideSize = $block->getSlideSize();
+$thumbSize = $block->getThumbnailSize();
+$galleryImages = $block->getGalleryImagesJson();
+?>
+
+<div class="product-item-photo<?php if (count(json_decode($galleryImages)) > 1):?> gallery<?php endif;?>">
+    <div class="gallery-placeholder-featured featured-listing-gallery _block-content-loading"
+         data-gallery-role-featured="gallery-placeholder-featured" data-mage-init='{
+                "mage/gallery/gallery": {
+                    "mixins":["magnifier/magnify"],
+                    "magnifierOpts": <?php /* @escapeNotVerified */ echo $block->getMagnifier(); ?>,
+                    "data": <?php /* @escapeNotVerified */ echo $galleryImages; ?>,
+                    "options": {
+                        "nav": "thumbs",
+                        "loop": true,
+                        "keyboard": false,
+                        "arrows": false,
+                        "allowfullscreen" : false,
+                        "navtype": "slides",
+                        "navdir": "horizontal",
+                        "navposition": "bottom",
+                        "thumbborderwidth": 1,
+                        "thumbmargin": 6,
+                        "captions": false,
+                        "width": "<?php echo empty($slideSize['width'])
+                                    ? $block->getImageAttribute('category_page_grid', 'width')
+                                    : $slideSize['width']; ?>",
+                        "maxheight": "<?php  echo empty($slideSize['height'])
+                                    ? $block->getImageAttribute('category_page_grid', 'height')
+                                    : $slideSize['height']; ?>",
+                        "thumbwidth": "<?php echo empty($thumbSize['width']) ? $block->getImageAttribute('product_thumbnail_image', 'width') : $thumbSize['width']; ?>",
+                        "thumbheight": <?php  echo empty($thumbSize['height']) ? $block->getImageAttribute('product_thumbnail_image', 'height') : $thumbSize['height']; ?>,
+                        "transition": "slide",
+                        "navarrows": false,
+                        "shadows" : false
+                    },
+                    "fullscreen": {
+                        "nav": "thumbs",
+                        "loop": "false",
+                        "navdir": "horizontal",
+                        "navarrows": "true",
+                        "arrows": "false"
+                    },
+                    "breakpoints": {
+                        "mobile": {
+                            "conditions": {
+                                "max-width": "479px"
+                            },
+                            "options": {
+                                "options": {
+                                    "nav": "false"
+                                }
+                            }
+                        }
+                    }
+                },
+                "featuredProductGallery" : {},
+                "Magento_ProductVideo/js/fotorama-add-video-events": {
+                    "videoData": <?php /* @escapeNotVerified */ echo $block->getVideoData(); ?>,
+                    "videoSettings": <?php /* @escapeNotVerified */ echo $block->getVideoSettings(); ?>,
+                    "optionsVideoData": []
+                }
+            }'>
+    </div>
+</div>

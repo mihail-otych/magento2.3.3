@@ -1,0 +1,94 @@
+//
+//  Buttons
+//  _____________________________________________
+
+.lib-button() {
+    .lib-css(border-radius, @button__border-radius);
+    text-transform: uppercase;
+    @media (max-width: (@screen__l - 1)) {
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+    @media (min-width: @screen__xl) {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+}
+
+.lib-button-primary() {
+    position: relative;
+    z-index: 1;
+    text-transform: uppercase;
+
+    &:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        z-index: -1;
+        background-color: @button-primary__hover__background;
+        transform: scaleY(0.2);
+        opacity: 0;
+        transition: 0.2s all ease;
+    }
+
+    &:hover {
+        background-color: @button-primary__background;
+        &:before {
+            transform: none;
+            opacity: 1;
+        }
+    }
+}
+
+& when (@media-common = true) {
+    button,
+    .action {
+        height: auto;
+        text-align: center;
+        transition: 0.3s all ease;
+    }
+
+    .action.default {
+        .lib-button();
+        position: relative;
+        z-index: 1;
+        
+        &:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            z-index: -1;
+            background-color: @button__hover__background;
+            transform: scaleY(0.2);
+            opacity: 0;
+            transition: 0.2s all ease;
+        }
+
+        &:hover {
+            background-color: @button__background;
+            &:before {
+                transform: none;
+                opacity: 1;
+            }
+        }
+    }
+
+    .action-link {
+        display: inline-block;
+        font-size: 18px;
+        line-height: 1.2;
+        text-transform: uppercase;
+        text-decoration: underline;
+        transition: 0.3s all ease;
+
+        &:hover {
+            color: @color-primary;
+        }
+    }
+}

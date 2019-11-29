@@ -1,0 +1,58 @@
+//
+//  Parallax
+//  ---------------------------------------------
+
+& when (@media-common = true) {
+    .parallax {
+        position: relative;
+        overflow: hidden;
+
+        &_image, &_pattern {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 100%;
+            background-position: center center;
+            will-change: transform;
+        }
+
+        &_image {
+            background-repeat: no-repeat;
+            -webkit-background-size: cover;
+            background-size: cover;
+        }
+
+        &_pattern {
+            background-repeat: repeat;
+        }
+
+        &_cnt {
+            position: relative;
+        }
+        &.banner {
+            background-color: @color-light;
+            .banner-content {
+                position: relative;
+                padding-top: 30px;
+                padding-bottom: 30px;
+            }
+        }
+    }
+}
+
+& when (@media-target = 'desktop') {
+    .parallax {
+        &.banner {
+            .banner-content {
+                padding-top: 80px;
+                padding-bottom: 90px;
+
+                @media (min-width: @screen__xl) {
+                    padding-top: 160px;
+                    padding-bottom: 180px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,62 @@
+//
+//  Header
+//  ---------------------------------------------
+
+// Header 2
+& when (@media-target = 'mobile') {
+    @media (max-width: (@screen__m - 1)) {
+        .page-header.layout-2 {
+            .sm-header-nav-wrap {
+                padding: 0;
+            }
+        }
+    }
+}
+
+& when (@media-target = 'desktop') {
+    .page-header {
+        .left-panel, .right-panel {
+            flex-basis: 30%;
+            max-width: 30%;
+        }
+        .right-panel {
+            .make-flex();
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: flex-end;
+        }
+    }
+
+    .page-header.layout-2 {
+        .sm-header-nav-wrap {
+            padding-top: 3px;
+        }
+
+        @media (min-width: @screen__xl) {
+            .navigation.tm-navigation li.level-top .mm-label {
+                top: -10px;
+            }
+        }
+
+        @media (max-width: (@screen__l - 1)) {
+            .logo {
+                margin: 0;
+            }
+            nav.navigation {
+                border-top: none;
+                margin-top: 0;
+            }
+        }
+    }
+
+    .page-header.layout-3 {
+        .switcher .options ul.switcher-dropdown {
+            left: auto;
+            right: 0;
+        }
+    }
+
+    html.rtl {
+
+    }
+}

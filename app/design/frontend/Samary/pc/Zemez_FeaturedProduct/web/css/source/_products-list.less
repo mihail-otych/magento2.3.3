@@ -1,0 +1,194 @@
+/* 
+ * 	Featured Product by Zemez
+ */
+
+// Main Styles
+
+& when (@media-target = 'mobile') {
+    .block.widget {
+        &.featured:not(.sidebar-featured) {
+            .products-list .product-items {
+                .product-label {
+                    left: 10px;
+                    right: auto;
+                }
+            }
+
+            .custom-columns .products-list .product-item {
+                float: left;
+            }
+        }
+
+        &.products-slider {
+            margin-bottom: 10px;
+            background-color: @color-lightest;
+            .list.products-list .product-items {
+                margin: 0;
+                box-sizing: border-box;
+                .product-item {
+                    width: auto;
+                    max-width: none;
+                    margin: 0;
+                    padding: 10px 8px;
+                }
+                @media (min-width: @screen__s) {
+                    padding-left: 4.5%;
+                    padding-right: 4.5%;
+                    .product-item {
+                        padding: 30px;
+                    }
+                }
+            }
+
+            .tm-featured-switch-image-container {
+                .make-flex();
+                justify-content: center;
+                align-items: flex-end;
+                overflow: visible;
+            }
+
+            .product-item-info {
+                align-items: stretch;
+            }
+
+            .actions-primary {
+                margin-bottom: 0;
+            }
+
+            div.product-item {
+                a.product-item-photo {
+                    flex-basis: 47%;
+                    max-width: 47%;
+                }
+                .product-item-details {
+                    justify-content: center;
+                    flex-basis: 53%;
+                    max-width: 53%;
+                    padding-left: 5.5%;
+                }
+                .product-item-name {
+                    font-weight: 400;
+                    line-height: 1.2;
+                    color: @color-dark;
+                    @media (min-width: @screen__s) {
+                        font-size: 20px;
+                    }
+                }
+                .product-item-description, .actions-secondary {
+                    display: none;
+                }
+            }
+            .product-item-photo {
+                text-align: center;
+                img {
+                    display: inline-block;
+                    background-color: @color-lightest;
+                    border: 8px solid @color-white;
+                    box-sizing: border-box;
+                    width: 59%;
+                    box-shadow: 0 10px 16px -6px rgba(0,0,0,0.09);
+                    opacity: 1 !important;
+                    transition: 0.3s all ease;
+                    transform-origin: left top;
+                }
+                .replaced {
+                    display: block !important;
+                    position: static;
+                    opacity: 1 !important;
+                    width: 51%;
+                    margin-left: -10%;
+                    img {
+                        width: 100%;
+                        transform-origin: right top;
+                    }
+                }
+                &:hover {
+                    img {
+                        transform: scale(0.93);
+                    }
+                    .replaced {
+                        img {
+                            transform: scale(1.03);
+                        }
+                    }
+                }
+            }
+
+            .timer-wrapper > div {
+                background: none;
+            }
+
+            .owl-dots {
+                padding-top: 5px;
+                padding-bottom: 8px;
+                button.owl-dot {
+                    background-color: #cecece;
+                    &.active {
+                        background-color: @color-default;
+                    }
+                }
+            }
+
+            .owl-carousel div.owl-nav {
+                @media (max-width: (@screen__s - 1)) {
+                    display: none;
+                }
+                button {
+                    font-size: 40px;
+                    width: 50px;
+                    margin-top: -25px;
+                    &:before {
+                        line-height: 50px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+& when (@media-target = 'desktop') {
+    .block.widget {
+        &.products-slider {
+            padding: 20px 25px;
+
+            .list.products-list .product-items {
+                .product-item {
+                    flex-basis: 100%;
+                }
+            }
+
+            div.product-item {
+                .product-item-name {
+                    font-size: 28px;
+                }
+
+                .price-box {
+                    font-size: 24px;
+                }
+
+                @media (min-width: @screen__xl) {
+                    .product-item-name {
+                        font-size: 50px;
+                    }
+
+                    .price-box {
+                        font-size: 40px;
+                    }
+                }
+            }
+
+            .product-item-photo {
+                img {
+                    border-width: 15px;
+                }
+            }
+        }
+    }
+}
+
+// Carousel
+& when (@media-target = 'mobile') {
+    .block.featured:not(.sidebar-featured) {
+
+    }
+}

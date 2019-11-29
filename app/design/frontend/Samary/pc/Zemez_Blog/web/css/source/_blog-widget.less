@@ -1,0 +1,123 @@
+
+& when (@media-target = 'mobile') {
+    // Main styles
+    .widget.blog-posts {
+        clear: both;
+        width: 100%;
+        text-align: center;
+
+        .post-item {
+            text-align: left;
+        }
+
+        // Post link
+        .post-link {
+            font-weight: 700;
+            text-transform: none;
+        }
+    }
+
+    .widget-post-grid {
+        .post-items {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 0;
+            margin: 0 -15px;
+            width: auto;
+        }
+
+        .post-item {
+            list-style: none;
+            padding: 0 15px;
+            box-sizing: border-box;
+            margin-bottom: 30px;
+        }
+
+        // no owl-carousel
+        .post-items > .post-item {
+            @media (min-width: @screen__xs) {
+                flex-basis: 50%;
+                max-width: 50%;
+            }
+        }
+
+        .post-image {
+            margin-bottom: 10px;
+        }
+    }
+
+    .widget-post-list {
+        .item-wrapper {
+            margin-bottom: 25px;
+        }
+
+        .post-image, .post-content-wrapper {
+            box-sizing: border-box;
+        }
+
+        @media (min-width: @screen__xs) {
+            .item-wrapper {
+                .make-flex();
+                margin-bottom: 40px;
+            }
+            .post-image {
+                flex-basis: 47.5%;
+                max-width: 47.5%;
+            }
+
+            .post-content-wrapper {
+                flex-basis: 52.5%;
+                max-width: 52.5%;
+                padding-left: 15px;
+            }
+        }
+
+        @media (min-width: @screen__s) {
+            .post-content-wrapper {
+                padding-left: 29px;
+            }
+        }
+    }
+
+    .blog-posts.widget-post-column {
+        .post-image, .post-content-wrapper {
+            box-sizing: border-box;
+        }
+        .post-short-content {
+            margin-bottom: 10px;
+        }
+        .post-item {
+            time {
+                margin-top: 0;
+            }
+        }
+        .post-image {
+            margin-bottom: 10px;
+        }
+
+        @media (min-width: 400px) {
+            .item-wrapper {
+                .make-flex();
+            }
+            .post-image {
+                flex-basis: 40%;
+                max-width: 40%;
+            }
+            .post-content-wrapper {
+                flex-basis: 60%;
+                max-width: 60%;
+                padding-left: 15px;
+            }
+        }
+    }
+
+    .widget-post-column {
+        .post-item {
+            margin-bottom: 30px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}

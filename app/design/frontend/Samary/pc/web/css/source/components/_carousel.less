@@ -1,0 +1,128 @@
+//
+//  Carousel custom styles
+//  _____________________________________________
+
+& when (@media-target = 'mobile') {
+    .owl-carousel {
+        .owl-stage {
+            .make-flex();
+            align-items: flex-start;
+            justify-content: center;
+        }
+
+        div.owl-nav {
+            button.owl-prev,
+            button.owl-next {
+                position: absolute;
+                top: 50%;
+                width: 30px;
+                margin-top: -15px;
+                font-size: 24px;
+                line-height: 0;
+                transition: .3s all ease;
+                &:before {
+                    line-height: 30px;
+                }
+                &:hover {
+                    color: @color-primary;
+                }
+            }
+
+            button.owl-prev {
+                left: -3px;
+                .font-icon('\f104', 'FontAwesome');
+            }
+
+            button.owl-next {
+                right: -3px;
+                .font-icon('\f105', 'FontAwesome');
+            }
+
+            @media (min-width: @screen__xs) {
+                button.owl-prev {
+                    left: -10px;
+                }
+
+                button.owl-next {
+                    right: -10px;
+                }
+            }
+        }
+
+        .owl-dots {
+            width: 100%;
+            padding-left: (@gutter__width / 2);
+            padding-right: (@gutter__width / 2);
+            text-align: center;
+            box-sizing: border-box;
+            button.owl-dot {
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                background: @color-lightest;
+                transition: .3s ease;
+
+                &.active, &:hover {
+                    background: @color-default;
+                }
+
+                & + button.owl-dot {
+                    margin-left: 10px;
+                }
+
+                @media (min-width: @screen__s) {
+                    width: 15px;
+                    height: 15px;
+
+                    & + button.owl-dot {
+                        margin-left: 15px;
+                    }
+                }
+            }
+        }
+    }
+
+    @media (max-width: (@screen__xs - 1)) {
+        .columns, .content, .container {
+            button.owl-prev {
+                left: -17px;
+            }
+
+            button.owl-next {
+                right: -17px;
+            }
+        }
+    }
+
+    // RTL
+    html.rtl {
+        .owl-carousel {
+            .owl-dots {
+                button.owl-dot {
+                    & + button.owl-dot {
+                        margin-left: 0;
+                        margin-right: 15px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+& when (@media-target = 'desktop') {
+    .columns, .content, .container {
+        .owl-carousel {
+            div.owl-nav {
+                @media (min-width: 1400px) {
+                    button.owl-prev {
+                        left: -40px;
+                    }
+
+                    button.owl-next {
+                        right: -40px;
+                    }
+                }
+            }
+        }
+    }
+}

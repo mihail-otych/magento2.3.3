@@ -1,0 +1,113 @@
+
+& when (@media-target = 'mobile') {
+    // Main styles
+    .block-posts-list {
+        clear: both;
+
+        .post-items {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 -15px;
+        }
+
+        .post-item {
+            padding: 0 15px;
+            box-sizing: border-box;
+            margin-bottom: 30px;
+        }
+
+        // Post link
+        .post-link {
+            font-weight: 700;
+        }
+
+        // Post data
+        .post-data {
+            border-top: solid 1px @blog_data-border-color;
+            padding: 11px 0 0;
+            display: flex;
+            justify-content: space-between;
+
+            .create-date,
+            .post-author,
+            .post-comments {
+                a {
+                    text-decoration: none;
+                }
+            }
+
+            .create-date {
+                order: 1;
+
+                time {
+                    display: inline-block;
+                }
+            }
+
+            .post-author {
+                order: 2;
+            }
+
+            .post-comments {
+                order: 3;
+                flex-basis: 50px;
+                text-align: right;
+            }
+
+            @media (max-width: 1200px) {
+                display: block;
+                overflow: hidden;
+
+                .create-date,
+                .post-author {
+                    display: block;
+                }
+
+                .post-comments {
+                    float: right;
+                }
+            }
+        }
+
+        @media (max-width: 350px) {
+            .post-item {
+                flex-basis: 100%;
+            }
+        }
+    }
+
+    .posts-list-wrapper {
+        //Toolbar
+        .toolbar-top {
+            .pages {
+                display: none;
+            }
+        }
+
+        .toolbar-bottom {
+            .toolbar {
+                .pages {
+                    display: block;
+                }
+            }
+
+            .sorter,
+            .limiter {
+                display: none !important;
+            }
+        }
+    }
+}
+
+& when (@media-target = 'desktop') {
+    .post-item {
+        div.post-image {
+            margin-bottom: 10px;
+        }
+        div.post-short-content {
+            margin-bottom: 10px;
+        }
+    }
+}

@@ -1,0 +1,31 @@
+//
+//  Upsell products
+//  ---------------------------------------------
+
+& when (@media-target = 'mobile'){
+    .block.upsell{
+        position: relative;
+
+        .title {
+            text-align: center;
+            strong {
+                margin-top: 0;
+            }
+        }
+
+        .block-actions button.action.select {
+            color: @color-primary;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    .products-grid.products-upsell{
+        padding: 0;
+
+        .owl-carousel .owl-nav {
+            top: -15px;
+        }
+    }
+}

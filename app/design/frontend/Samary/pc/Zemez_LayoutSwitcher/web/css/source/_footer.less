@@ -1,0 +1,113 @@
+//
+//  Footer
+//  ---------------------------------------------
+
+// Footer 2
+& when (@media-target = 'mobile') {
+    .page-footer.layout-2 {
+        background: none;
+
+        .footer.content {
+            padding-top: 0;
+        }
+
+        .footer-top {
+            padding: 20px 15px;
+            margin-bottom: 30px;
+            background-color: @color-lightest;
+        }
+    }
+
+    .page-footer {
+        .fieldset {
+            margin-bottom: 5px;
+            > .field {
+                padding-top: 0;
+                padding-bottom: 0;
+                margin-bottom: 15px;
+
+                > div.control {
+                    float: none;
+                    width: auto;
+                }
+            }
+        }
+    }
+}
+
+& when (@media-target = 'desktop') {
+    .page-footer.layout-2 {
+        background: none;
+        text-align: center;
+
+        .footer.content {
+            padding-top: 0;
+        }
+
+        .footer-top {
+            .make-flex();
+            align-items: center;
+            justify-content: center;
+            padding-top: 34px;
+            padding-bottom: 34px;
+            margin-bottom: 49px;
+            background-color: @color-lightest;
+        }
+
+        .block.newsletter {
+            .make-flex();
+            align-items: center;
+            margin-bottom: 0;
+            margin-right: 80px;
+
+            .heading-4 {
+                margin-bottom: 0;
+                margin-right: 25px;
+            }
+
+            form.subscribe .field {
+                width: 310px;
+            }
+        }
+
+        h4 {
+            display: none;
+        }
+
+        .footer-col-content {
+            display: flex !important;
+            flex-wrap: wrap;
+            justify-content: center;
+
+            ul {
+                .make-flex();
+                flex-wrap: wrap;
+                justify-content: center;
+                margin-left: -20px;
+
+                li {
+                    margin-left: 20px;
+                }
+
+                & + ul {
+                    margin-left: 0;
+                }
+            }
+        }
+
+        .footer-col {
+            padding-bottom: 12px;
+
+            .footer-col-content {
+                li + li,
+                ul + ul {
+                    margin-top: 0;
+                }
+            }
+        }
+
+        .footer-panel {
+            margin-top: 22px;
+        }
+    }
+}

@@ -1,0 +1,123 @@
+//
+//  Newsletter
+//  __________________________________________________
+
+& when (@media-target = 'mobile') {
+    .block.newsletter .content {
+        form.subscribe {
+            .make-flex();
+            justify-content: center;
+            align-items: stretch;
+            .flex-direction(column);
+            text-align: center;
+        }
+
+        .label {
+            flex-basis: 100%;
+            display: block;
+            line-height: 21px;
+            margin-bottom: 22px;
+        }
+
+        .field {
+            padding: 0;
+            margin-bottom: 18px;
+
+            .control:before {
+                display: none;
+            }
+
+            input {
+                box-sizing: border-box;
+                margin-bottom: 0;
+                font-size: 12px;
+            }
+        }
+
+        .actions {
+            width: auto;
+            padding-left: 4px;
+
+            .action.subscribe {
+                margin: 0;
+                padding: 11px 14px;
+                font-size: 14px;
+                line-height: 20px;
+            }
+        }
+
+        #newsletter-error {
+            position: absolute;
+            top: ~'calc(100% - 7px)';
+            left: 0;
+            padding: 0 2px;
+            font-size: 12px;
+            line-height: 16px;
+            text-align: left;
+        }
+
+        form.subscribe {
+            .flex-direction(row);
+
+            .field {
+                margin-right: 5px;
+                margin-bottom: 0;
+                flex-grow: 1;
+            }
+        }
+    }
+
+    // RTL
+    html.rtl {
+        .block.newsletter .content {
+            .field {
+                input {
+                    padding-left: 0;
+                    padding-right: 18px;
+                }
+            }
+
+            .actions {
+                padding-left: 0;
+                padding-right: 4px;
+            }
+
+            #newsletter-error {
+                left: auto;
+                right: 0;
+            }
+
+            @media (min-width: @screen__xs) {
+                form.subscribe {
+                    .field {
+                        margin-right: 0;
+                        margin-left: 5px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+& when (@media-target = 'desktop') {
+    .block.newsletter {
+        width: auto;
+    }
+
+    // RTL
+    html.rtl {
+        .block.newsletter .content {
+            @media (max-width: (@screen__l - 1)) {
+                .form.subscribe {
+                    .field {
+                        margin-left: 0;
+                    }
+
+                    .actions {
+                        padding-right: 0;
+                    }
+                }
+            }
+        }
+    }
+}

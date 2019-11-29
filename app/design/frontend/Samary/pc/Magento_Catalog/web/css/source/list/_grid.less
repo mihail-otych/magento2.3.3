@@ -1,0 +1,183 @@
+//
+//  Grid Variables
+//  ---------------------------------------------
+
+& when (@media-target = 'mobile') {
+    .grid.products-grid {
+        .product-item-details {
+            position: relative;
+            padding-top: 7px;
+            text-align: center;
+        }
+
+        .product-reviews-summary {
+            @media (max-width: (@screen__m - 1)) {
+                display: none;
+            }
+        }
+
+        .price-box {
+            justify-content: center;
+        }
+
+        .action.tocart {
+            min-width: 80%;
+        }
+
+        .fotorama {
+            overflow: visible;
+        }
+
+        div[class^="swatch-opt-"] {
+            margin-top: 10px;
+        }
+    }
+
+    // RTL
+    html.rtl {
+
+    }
+}
+
+& when (@media-target = 'desktop') {
+    .grid.products-grid {
+        .product-item {
+            z-index: 1;
+
+            &:hover {
+                z-index: 2;
+            }
+        }
+
+        .product-item-info {
+            &, > * {
+                position: relative;
+            }
+
+            &:before, .product-item-inner:before {
+                display: block;
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: -20px;
+                right: -20px;
+                background: @color-white;
+                border: 1px solid #dedbdb;
+                transition: 0.2s all ease;
+            }
+
+            &:before {
+                top: -20px;
+                border-bottom: none;
+                opacity: 0;
+            }
+
+            .product-info {
+                position: relative;
+                z-index: 1;
+            }
+
+            .product-item-inner {
+                visibility: hidden;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                padding-bottom: 15px;
+                transform: scaleY(0);
+                transform-origin: top;
+                opacity: 0;
+                transition: 0.2s all ease;
+
+                &:before {
+                    top: -40px;
+                    border-top: none;
+                    z-index: -1;
+                }
+            }
+
+            .gallery + .product-item-details {
+                transition: 0.3s transform ease;
+            }
+
+
+            &:hover {
+                &:before {
+                    opacity: 1;
+                    transition-duration: 0.3s;
+                }
+
+                .gallery + .product-item-details {
+                    transform: translateY(23px);
+                }
+
+                .product-item-inner {
+                    visibility: visible;
+                    opacity: 1;
+                    transform: scaleY(1);
+                    transition-duration: 0.3s;
+                }
+
+                .fotorama__nav-wrap {
+                    bottom: -35px;
+                }
+            }
+        }
+
+        .product-item-details {
+            padding-top: 19px;
+        }
+
+        .product-reviews-summary {
+            display: block;
+
+            .rating-summary {
+                display: inline-block;
+            }
+
+            .reviews-actions {
+                display: none;
+            }
+        }
+
+        .owl-carousel {
+            &:hover {
+              z-index: 2;
+            }
+            .owl-item {
+                padding-bottom: 200px;
+            }
+
+            .owl-stage-outer {
+                margin-top: -15px;
+                margin-bottom: -200px;
+            }
+
+            .product-item {
+                padding-top: 15px;
+                .product-label {
+                    top: 25px;
+                }
+            }
+
+            .product-item-info {
+                &:before, .product-item-inner:before {
+                    left: -12px;
+                    right: -12px;
+                }
+
+                &:before {
+                    top: -12px;
+                }
+            }
+        }
+
+        @media (min-width: @screen__xl) {
+            .product-item-info {
+                .product-item-inner {
+                    padding-bottom: 30px;
+                }
+            }
+        }
+    }
+}

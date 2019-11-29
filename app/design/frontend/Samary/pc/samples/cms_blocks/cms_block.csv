@@ -1,0 +1,414 @@
+"block_id","title","identifier","content","creation_time","update_time","is_active"
+"1","Footer Column Content 1","footer_col_1","<p>While other fashion websites offer different range of clothes from various clothing manufacturers, we make a great difference in comparison with our competitors. In 2005, when our company appeared, we decided that our appearance in the world of fashion should completely change the established trends for the better.</p>","2018-09-18 14:07:20","2019-03-26 07:59:35","1"
+"2","Footer Column 2 Title","footer_col_2_title","<h4>Information</h4>","2018-09-18 16:10:57","2019-03-26 07:59:28","1"
+"3","Footer Column Content 2","footer_col_2","<ul>
+    <li><a href=""{{store direct_url=""about-us""}}"">About Us</a></li>
+    <li><a href=""{{store direct_url=""customer-service""}}"">Customer Service</a></li>
+    <li><a href=""{{store url=""""}}template-settings"">Template Settings</a></li>
+</ul>","2018-09-18 16:11:42","2019-03-26 07:57:24","1"
+"4","Footer Column Content 3","footer_col_3","<div class=""footer-col"">
+	<h4>Why buy from us</h4>
+	<div class=""footer-col-content"">
+	    <ul>
+	        <li><a href=""{{store url=""""}}shipping-delivery"">Shipping & Delivery</a></li>
+	        <li><a href=""{{store url=""""}}secure-payment"">Secure payment</a></li>
+	        <li><a href=""{{store url=""""}}support"">Support</a></li>
+	        <li><a href=""{{store url=""""}}guarantee"">Guarantee</a></li>
+	        <li><a href=""{{store url=""""}}terms-conditions"">Terms & Conditions</a></li>
+	    </ul>
+	</div>
+</div>","2018-09-18 16:12:18","2019-03-26 07:56:28","1"
+"5","Footer Column Content 4","footer_col_4","<div class=""footer-col"">
+    <h4>My account</h4>
+    <div class=""footer-col-content"">
+        <ul>
+            <li><a href=""{{store url='customer/account/login/'}}"">Sign In</a></li>
+            <li><a href=""{{store url='checkout/cart/'}}"">View Cart</a></li>
+            <li><a href=""{{store url='wishlist/'}}"">My Wishlist</a></li>
+            <li><a href=""{{store url=""""}}faq"">FAQ</a></li>
+        </ul>
+    </div>
+</div>","2018-09-18 16:14:40","2019-03-26 07:55:49","1"
+"6","AMP Footer Links","amp_footer_links","<ul><li><a href=""{{store url='about-us'}}"">About Us</a></li><li><a href=""{{store url='contact'}}"">Contact Us</a></li><li><a href=""{{store url='customer-service'}}"">Customer Service</a></li><li><a href=""{{store url='privacy-policy-cookie-restriction-mode'}}"">Privacy Policy</a></li><li><a href=""{{store url='template-settings'}}"">Templates Settings</a></li></ul>","2018-09-18 16:26:13","2018-09-18 16:26:13","1"
+"7","Contact Us Info","contact_us_info","<!-- Contact Us Info -->
+<address class=""contact-us-info"">
+    <dl class=""contact-us-info-item"">
+        <dt><span class=""contact-us-info-icon fa fa-map-marker""></span>
+            <div class=""contact-us-info-title"">Address:</div>
+        </dt>
+        <dd>
+            <div class=""contact-us-info-description"">4578 Marmora Road, Glasgow, D04 89GR</div>
+        </dd>
+    </dl>
+    <dl class=""contact-us-info-item"">
+        <dt><span class=""contact-us-info-icon fa fa-phone""></span>
+            <div class=""contact-us-info-title"">Phones:</div>
+        </dt>
+        <dd>
+            <div class=""contact-us-info-description""><a href=""tel:8001230045"">(800) 123-0045</a>; <a
+                    href=""tel:8001230046"">(800) 123-0046</a></div>
+        </dd>
+    </dl>
+    <dl class=""contact-us-info-item"">
+        <dt><span class=""contact-us-info-icon fa fa-clock-o""></span>
+            <div class=""contact-us-info-title"">We are open:</div>
+        </dt>
+        <dd>
+            <div class=""contact-us-info-description"">Mn-Fr: 10 am-8 pm</div>
+        </dd>
+    </dl>
+    <dl class=""contact-us-info-item"">
+        <dt><span class=""contact-us-info-icon fa fa-envelope""></span>
+            <div class=""contact-us-info-title"">E-mail:</div>
+        </dt>
+        <dd>
+            <div class=""contact-us-info-description contact-us-info-description-email""><a
+                    href=""mailto:info@demolink.org"">info@demolink.org</a></div>
+        </dd>
+    </dl>
+</address>
+<!-- END Contact Us Info -->","2018-10-10 17:31:43","2018-10-10 17:31:43","1"
+"8","Home Preview","home-preview","<div class=""row text-center"">
+    <div class=""col-xxs-4 col-m-3"">
+        <a class=""link-box"" href=""{{store url=''}}?___store=layout1"">
+            <h5>Home 1</h5>
+            <img src=""{{media url=&quot;wysiwyg/home-1.jpg&quot;}}"" alt="""" />
+        </a>
+    </div>
+    <div class=""col-xxs-4 col-m-3"">
+        <a class=""link-box"" href=""{{store url=''}}?___store=layout2"">
+            <h5>Home 2</h5>
+            <img src=""{{media url=&quot;wysiwyg/home-2.jpg&quot;}}"" alt="""" />
+        </a>
+    </div>
+    <div class=""col-xxs-4 col-m-3"">
+        <a class=""link-box"" href=""{{store url=''}}?___store=layout3"">
+            <h5>Home 3</h5>
+            <img src=""{{media url=&quot;wysiwyg/home-3.jpg&quot;}}"" alt="""" />
+        </a>
+    </div>
+    <div class=""col-xxs-4 col-m-3"">
+        <a class=""link-box"" href=""{{store url=''}}?___store=layout4"">
+            <h5>Home 4</h5>
+            <img src=""{{media url=&quot;wysiwyg/home-4.jpg&quot;}}"" alt="""" />
+        </a>
+    </div>
+    <div class=""col-xxs-4"">
+        <a class=""link-box"" href=""{{store url=''}}?___store=layout5"">
+            <h5>Home 5</h5>
+            <img src=""{{media url=&quot;wysiwyg/home-5.jpg&quot;}}"" alt="""" />
+        </a>
+    </div>
+    <div class=""col-xxs-4"">
+        <a class=""link-box"" href=""{{store url=''}}?___store=layout6"">
+            <h5>Home 6</h5>
+            <img src=""{{media url=&quot;wysiwyg/home-6.jpg&quot;}}"" alt="""" />
+        </a>
+    </div>
+    <div class=""col-xxs-4"">
+        <a class=""link-box"" href=""{{store url=''}}?___store=layout7"">
+            <h5>Home 7</h5>
+            <img src=""{{media url=&quot;wysiwyg/home-7.jpg&quot;}}"" alt="""" />
+        </a>
+    </div>
+</div>","2019-03-07 13:51:42","2019-05-24 09:56:57","1"
+"9","Menu Banner 1","menu-banner-1","<a class=""banner hovered"" href=""{{store url='accessories/shoes.html'}}"">
+    <img src=""{{media url=&quot;wysiwyg/menu-banner-1.jpg&quot;}}"" alt="""" />
+    <div class=""banner-content left"">
+        <h5>Shoes <span class=""color-primary"">20% off</span></h5>
+    </div>
+</a>","2019-03-07 14:49:49","2019-03-11 09:10:39","1"
+"10","Menu Banner 2","menu-banner-2","<a class=""banner hovered"" href=""{{store url='women.html'}}"">
+    <img src=""{{media url=&quot;wysiwyg/menu-banner-2.jpg&quot;}}"" alt="""" />
+    <div class=""banner-content left text-center"">
+        <h5>Designer <br> <span class=""color-primary"">Collections</span></h5>
+    </div>
+</a>","2019-03-07 14:52:59","2019-03-11 09:14:18","1"
+"11","Menu Banner 3","menu-banner-3","<a class=""banner hovered"" href=""{{store url='women.html'}}"">
+    <img src=""{{media url=&quot;wysiwyg/menu-banner-3.jpg&quot;}}"" alt="""" />
+    <div class=""banner-content top left"">
+        <div>
+            <h5>For Convenience of Choice</h5>
+            <p class=""hidden-mobile"">We think about the convenience of your choice. Our products are supplied with star rating that should help hesitant buyers to take a decision. What's more, you can search our site if you know exactly what you are looking for or use a bunch of different filters that will considerably save your time and efforts.</p>
+            <span class=""action default"">Shop Now!</span>
+        </div>
+    </div>
+</a>","2019-03-11 07:38:11","2019-05-24 10:14:35","1"
+"12","Menu Banner 4","menu-banner-4","<a class=""banner hovered"" href=""{{store url='women.html'}}"">
+    <img src=""{{media url=&quot;wysiwyg/menu-banner-4.jpg&quot;}}"" alt="""" />
+    <div class=""banner-content top left"">
+        <div>
+            <h5 class=""color-white"">The Highest Quality of Products</h5>
+            <p class=""color-white hidden-mobile"">Our store is more than just another average online retailer. We sell not only top quality products, but give out customers a positive online shopping experience. Forget about struggling to do everything at once: taking care of the family, running your business, walking your dog, cleaning the house, doing the shopping, etc.</p>
+            <span class=""action default"">Shop Now!</span>
+        </div>
+    </div>
+</a>","2019-03-11 07:46:17","2019-05-24 10:14:54","1"
+"13","Header Top Block","header_top_block","<div class=""header-top bg-secondary"">
+    <p><strong>25% OFF MENSWEAR*+ FREE NEXT DAY DELIVERY</strong> <a href=""{{store url='accessories/women.html'}}"">MORE</a></p>
+</div>","2019-03-11 15:14:16","2019-03-12 07:03:32","1"
+"14","Parallax Banner 1","parallax_banner_1","<div class=""banner parallax"" data-url=""{{media url=&quot;wysiwyg/banner-1.jpg&quot;}}"" data-speed=""0.8"">
+    <div class=""banner-content text-center"">
+        <h6 class=""color-white"">Spring - Summer 2019</h6>
+        <h1 class=""color-white"">NEW <br> ARRIVALS</h1>
+        <a class=""action default"" href=""{{store url='women.html'}}"">Shop Now!</a>
+    </div>
+</div>","2019-03-12 08:41:07","2019-03-12 12:41:47","1"
+"15","Home Banners 1","home_banners_1","<div class=""row"">
+    <div class=""col-xs-6"">
+        <a class=""banner hovered"" href=""{{store url='women.html'}}"">
+            <img src=""{{media url=&quot;wysiwyg/banner-2.jpg&quot;}}"" alt="""" />
+            <div class=""banner-content left"">
+                <div class=""text-center"">
+                    <h3>Two <br> ways to</h3>
+                    <h2 class=""color-primary"">Wear</h2>
+                    <span class=""action-link"">Shop Now!</span>
+                </div>
+            </div>
+        </a>
+    </div>
+    <div class=""col-xs-6"">
+        <a class=""banner hovered"" href=""{{store url='women.html'}}"">
+            <img src=""{{media url=&quot;wysiwyg/banner-3.jpg&quot;}}"" alt="""" />
+            <div class=""banner-content left"">
+                <div class=""text-center"">
+                    <h3 class=""color-white"">The White <br> Pants</h3>
+                    <h6 class=""color-white"">collection</h6>
+                    <h2 class=""color-primary"">20% off</h2>
+                </div>
+            </div>
+        </a>
+    </div>
+</div>","2019-03-12 10:51:34","2019-03-12 12:23:44","1"
+"16","Banner 1","banner_1","<div class=""banner"">
+    <img src=""{{media url=&quot;wysiwyg/banner-4.jpg&quot;}}"" alt="""" />
+    <div class=""banner-content"">
+        <div class=""text-center"">
+            <h6 class=""color-primary"">Spring - Summer 2019</h6>
+            <h1 class=""hidden-mobile"">Perfect <br> utility</h1>
+            <a class=""action default"" href=""{{store url='women.html'}}"">Shop Now!</a>
+        </div>
+    </div>
+</div>","2019-03-12 12:42:56","2019-03-12 13:06:58","1"
+"17","Home Banners 2","home_banners_2","<div class=""row"">
+    <div class=""col-m-6"">
+        <a class=""banner hovered"" href=""{{store url='women.html'}}"">
+            <img src=""{{media url=&quot;wysiwyg/banner-5.jpg&quot;}}"" alt="""" />
+            <div class=""banner-content left"">
+                <div class=""text-center"">
+                    <h3>Buy 2 items <br> Get one</h3>
+                    <h2 class=""color-primary"">for free</h2>
+                    <span class=""action-link"">Shop Now!</span>
+                </div>
+            </div>
+        </a>
+    </div>
+    <div class=""col-m-6"">
+        <div class=""row"">
+            <div class=""col-xs-6"">
+                <a href=""{{store url='women.html'}}"" class=""banner banner-box bg-primary"">
+                    <div class=""banner-content"">
+                        <h4>Free <br> Shipping</h4>
+                        <h6>on orders over $99</h6>
+                        <p class=""text-uppercase"">This offer is valid on all our store items</p>
+                    </div>
+                </a>
+            </div>
+            <div class=""col-xs-6"">
+                <a href=""{{store url='women.html'}}"" class=""banner banner-box"">
+                    <div class=""banner-content"">
+                        <h6 class=""color-primary"">COD</h6>
+                        <h4>Cash <br> on delivery</h4>
+                    </div>
+                </a>
+            </div>
+            <div class=""col-xs-6"">
+                <a href=""{{store url='women.html'}}"" class=""banner banner-box"">
+                    <div class=""banner-content"">
+                        <h4>Order <br> Return</h4>
+                        <h6 class=""color-primary"">Returns within 14 days</h6>
+                    </div>
+                </a>
+            </div>
+            <div class=""col-xs-6"">
+                <a href=""{{store url='women.html'}}"" class=""banner banner-box bg-secondary"">
+                    <div class=""banner-content"">
+                        <h2>75% off</h2>
+                        <span class=""action-link"">Shop Now!</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>","2019-03-12 13:30:20","2019-03-12 14:30:59","1"
+"18","Testimonial","testimonial","<div class=""bg-primary"">
+    <blockquote class=""quote"">
+        <q>Love this top. It looks really good even on an old lady. Yours are always swift and efficient to fulfill orders. Sometimes I am disappointed that an item sells out before I get round to it, but that's not their fault. Clothing is a good value for money. There is a good range of accessories to complement the clothes.</q>
+        <cite>Tara Selmon</cite>
+    </blockquote>
+</div>","2019-03-18 12:26:39","2019-03-18 12:26:39","1"
+"19","Footer Static Block Layout 3","footer_static_block","<div class=""footer-col"">
+    <h4>Testimonials</h4>
+    <div class=""footer-col-content"">
+        <q>Love this top. It looks really good even on an old lady. Yours are always swift and efficient to fulfill orders. Sometimes I am disappointed that an item sells out before I get round to it, but that's not their fault. Clothing is a good value for money. There is a good range of accessories to complement the clothes.</q>
+        <cite>Tara Selmon</cite>
+    </div>
+</div>","2019-03-29 11:10:07","2019-03-29 11:10:07","1"
+"20","Banner 2","banner_2","<div class=""bg-primary banner-fullwidth"">
+    <div class=""container"">
+        <div class=""row align-center"">
+            <div class=""col-xs-6"">
+                <a class=""banner hovered"" href=""{{store url='women.html'}}"">
+                    <img src=""{{media url=&quot;wysiwyg/banner-6.jpg&quot;}}"" alt="""" />
+                </a>
+            </div>
+            <div class=""col-xs-6 text-center"">
+                <h1>100’s of accessories</h1>
+                <p class=""price-big""><span>$</span>3</p>
+                <h3>& under</h3>
+                <a href=""{{store url='women.html'}}"" class=""action-link"">Shop now!</a>
+            </div>
+        </div>
+    </div>
+</div>","2019-04-04 17:27:24","2019-04-05 11:11:48","1"
+"21","Home Banners 3","home_banners_3","<div class=""row"">
+    <div class=""col-xs-6"">
+        <a class=""banner hovered"" href=""{{store url='men.html'}}"">
+            <img src=""{{media url=&quot;wysiwyg/banner-7.jpg&quot;}}"" alt="""" />
+            <div class=""banner-content left"">
+                <div class=""text-center"">
+                    <h3 class=""color-white"">Make a <br> statement</h3>
+                    <h2 class=""color-primary"">SUITS</h2>
+                    <span class=""action-link color-white"">Shop Now!</span>
+                </div>
+            </div>
+        </a>
+    </div>
+    <div class=""col-xs-6"">
+        <a class=""banner hovered"" href=""{{store url='men.html'}}"">
+            <img src=""{{media url=&quot;wysiwyg/banner-8.jpg&quot;}}"" alt="""" />
+            <div class=""banner-content left"">
+                <div class=""text-center"">
+                    <h2 class=""color-primary"">NEW <br> FOOTWEAR</h2>
+                    <h6 class=""color-white"">Looks from the <br> ground up</h6>
+                </div>
+            </div>
+        </a>
+    </div>
+</div>","2019-04-09 09:46:49","2019-04-24 14:41:46","1"
+"22","Banner 3","banner_3","<div class=""banner-fullwidth bg-secondary"">
+    <div class=""container text-center"">
+        <h1>£5 for you, 25% off for friends</h1>
+        <h6>Friends don't let friends wear bad outfits. Refer a friend and get £5 to spend at kitty, PLUS they'll get 25% off their first order.</h6>
+    </div>
+</div>","2019-04-24 15:07:49","2019-04-24 15:07:49","1"
+"23","Home Banners 4","home_banners_4","<div class=""row"">
+    <div class=""col-xs-6 col-m-4"">
+        <a class=""banner hovered"" href=""{{store url='women.html'}}"">
+            <img src=""{{media url=&quot;wysiwyg/banner-9.jpg&quot;}}"" alt="""" />
+            <div class=""banner-content text-center"">
+                <h3 class=""color-white"">more shoes, <br> less problems</h3>
+                <h2 class=""color-primary"">top 10</h2>
+                <span class=""action-link color-white"">Shop Now!</span>
+            </div>
+        </a>
+    </div>
+    <div class=""col-xs-6 col-m-4"">
+        <a class=""banner hovered"" href=""{{store url='women.html'}}"">
+            <img src=""{{media url=&quot;wysiwyg/banner-10.jpg&quot;}}"" alt="""" />
+            <div class=""banner-content text-center"">
+                <h3>NEW-SEASON <br> TOPS</h3>
+                <h2 class=""color-primary"">20% off</h2>
+                <span class=""action-link"">Shop Now!</span>
+            </div>
+        </a>
+    </div>
+    <div class=""col-xs-6 col-m-4"">
+        <a class=""banner hovered"" href=""{{store url='women.html'}}"">
+            <img src=""{{media url=&quot;wysiwyg/banner-11.jpg&quot;}}"" alt="""" />
+            <div class=""banner-content text-center"">
+                <h3 class=""color-white"">Buy 2 items <br> Get one</h3>
+                <h2 class=""color-primary"">for free</h2>
+                <span class=""action-link color-white"">Shop Now!</span>
+            </div>
+        </a>
+    </div>
+</div>","2019-04-25 12:55:30","2019-04-25 13:02:15","1"
+"24","Home Banners 5","home_banners_5","<div class=""row"">
+    <div class=""col-xs-6 col-m-3"">
+            <a href=""{{store url='women.html'}}"" class=""banner banner-box"">
+                    <div class=""banner-content"">
+                        <h6 class=""color-primary"">COD</h6>
+                        <h4>Cash <br> on delivery</h4>
+                    </div>
+            </a>
+    </div>
+    <div class=""col-xs-6 col-m-3"">
+            <a href=""{{store url='women.html'}}"" class=""banner banner-box bg-primary"">
+                    <div class=""banner-content"">
+                        <h4>Free <br> Shipping</h4>
+                        <h6>on orders over $99</h6>
+                        <p class=""text-uppercase"">This offer is valid on all our store items</p>
+                    </div>
+            </a>
+    </div>
+    <div class=""col-xs-6 col-m-3"">
+            <a href=""{{store url='women.html'}}"" class=""banner banner-box"">
+                    <div class=""banner-content"">
+                        <h4>Order <br> Return</h4>
+                        <h6 class=""color-primary"">Returns within 14 days</h6>
+                    </div>
+            </a>
+    </div>
+    <div class=""col-xs-6 col-m-3"">
+            <a href=""{{store url='women.html'}}"" class=""banner banner-box bg-secondary"">
+                    <div class=""banner-content"">
+                        <h2>75% off</h2>
+                        <span class=""action-link"">Shop Now!</span>
+                    </div>
+            </a>
+    </div>
+</div>","2019-04-25 14:20:19","2019-04-25 14:25:15","1"
+"25","Video Banner","video_banner","<div class=""banner"">
+    <div class=""video-bg"" data-property=""{videoURL:'http://youtu.be/0TSSoT4c2BI',containment:'self' ,autoPlay:true, stopMovieOnBlur:false, mute:true, loop:true, showControls:false, startAt:0, opacity:1}""></div>
+    <div class=""banner-content"">
+        <div class=""text-center"">
+            <h6 class=""color-white"">Spring - Summer 2019</h6>
+            <h1 class=""color-white hidden-mobile"">New <br> Arrivals</h1>
+            <a class=""action default"" href=""{{store url='women.html'}}"">Shop Now!</a>
+        </div>
+    </div>
+</div>","2019-04-25 15:39:34","2019-04-26 15:09:33","1"
+"26","Home Testimonials","home_testimonials","<div class=""bg-dark mb-10"">
+    <div class=""container"">
+        <div class=""row"">
+            <div class=""col-m-6"">
+                <blockquote class=""quote quote_type-2"">
+                    <div class=""quote-img"">
+                        <img src=""{{media url=&quot;wysiwyg/testimonial-1.jpg&quot;}}"" alt="""" />
+                    </div>
+                    <div class=""quote-content"">
+                        <q>Guys, you rock! Made a purchase at your store recently. The order has been shipped and delivered on time. The quality is superb! The price is quite reasonable. Told all my friends about your excellent service and the variety of choice. I think I’ll be your loyal customer in future as well. I wish your store many more years of prosperity.</q>
+                        <cite>Mary Taba</cite>
+                    </div>
+                </blockquote>
+            </div>
+            <div class=""col-m-6"">
+                <blockquote class=""quote quote_type-2"">
+                    <div class=""quote-img"">
+                        <img src=""{{media url=&quot;wysiwyg/testimonial-2.jpg&quot;}}"" alt="""" />
+                    </div>
+                    <div class=""quote-content"">
+                        <q>Having the distressing experience with some online shops before decided to say ‘’THANK YOU” to all personnel of this store. You are not only friendly, but deliver really good products in the shortest possible terms. In a word, I am absolutely happy with my purchase and the service. Everything was perfect!</q>
+                        <cite>Virginia Ubert</cite>
+                    </div>
+                </blockquote>
+            </div>
+        </div>
+    </div>
+</div>","2019-05-22 14:33:28","2019-05-22 16:16:13","1"
+"27","Amp Banner Big","amp_banner_big","<div class=""banner-big"">
+    <a href=""{{store url='accessories.html?amp=1'}}"" class=""banner-image"">
+    	<img width=""700"" height=""351"" layout=""responsive""  src=""{{media url=&quot;wysiwyg/amp-banner.jpg&quot;}}"" />
+    </a>
+</div>","2019-05-30 16:51:32","2019-05-30 16:51:32","1"

@@ -1,0 +1,100 @@
+
+& when (@media-target = 'mobile') {
+    // Main styles
+    .post-page {
+        clear: both;
+        width: 100%;
+
+        // Post text
+        .post-text {
+            margin-bottom: 25px;
+        }
+
+        // Post data
+        .post-data {
+            margin-bottom: 18px;
+            color: @blog_post-data-color;
+
+            .create-date,
+            .post-author,
+            .post-comments {
+                display: inline-block;
+                margin-right: 15px;
+
+                span,
+                a {
+                    display: inline-block;
+                }
+
+                a {
+                    color: @blog_post-data-color;
+                    text-decoration: none;
+
+                    &:hover {
+                        color: @blog_color;
+                    }
+                }
+
+                a span:before,
+                &:before {
+                    font-size: 18px;
+                    line-height: 18px;
+                    padding-right: 4px;
+                    color: @blog_color;
+                    vertical-align: middle;
+                }
+            }
+
+            .create-date time {
+                display: inline-block;
+            }
+
+            @media (max-width: 480px) {
+                overflow: hidden;
+
+                .create-date,
+                .post-author,
+                .post-comments {
+                    display: block;
+                    margin-bottom: 3px;
+                }
+            }
+        }
+
+        .post-meta {
+            .make-flex();
+            justify-content: space-between;
+            margin-bottom: 40px;
+
+            .post-comments {
+                margin-top: 7px;
+            }
+        }
+
+        .post-relatedproducts .block.related {
+            float: none;
+
+            .owl-carousel .product-item {
+                width: 100%;
+            }
+
+
+            .product-item {
+                width: 33.33%;
+
+                .product-item-info {
+                    width: 100%;
+                    padding: 0;
+                    margin: 0;
+                    box-shadow: none;
+                    border: none;
+                }
+
+                .product-item-photo {
+                    display: block;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}

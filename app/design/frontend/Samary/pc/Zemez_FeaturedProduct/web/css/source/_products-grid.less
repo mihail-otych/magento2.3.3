@@ -1,0 +1,126 @@
+/*
+ * 	Featured Product by Zemez
+ */
+
+// Carousel and Tabs
+& when (@media-target = 'mobile') {
+    .block.featured {
+        &[role="tablist"] {
+            .block-title {
+                display: inline-block;
+                width: auto;
+                margin-right: 15px;
+
+                &:before {
+                    display: none;
+                }
+
+                strong {
+                    margin-bottom: 0;
+                    cursor: pointer;
+                }
+
+                &.active strong {
+                    color: #ccc;
+                }
+            }
+
+            .block-content {
+                float: right;
+                margin-left: -100%;
+                padding: 3rem 0 0;
+                width: 100%;
+            }
+
+            @media (max-width: (@screen__m - 1)) {
+                .block-title {
+                    display: block;
+                    width: 100%;
+                }
+
+                .block-content {
+                    float: none;
+                    margin-left: 0;
+                }
+            }
+        }
+
+        [role="tablist"] {
+            text-align: center;
+
+            .category-title {
+                display: inline-block;
+                width: auto;
+                padding: 0;
+                margin-top: 30px;
+                font-size: 18px;
+                line-height: 1.2;
+                text-transform: uppercase;
+                transition: 0.3s all ease;
+
+                &:first-child {
+                    margin-top: 0;
+                }
+
+                &:before {
+                    display: none;
+                }
+
+                strong {
+                    margin-bottom: 0;
+                    cursor: pointer;
+                    font-weight: 300;
+                }
+
+                &.active, &:hover {
+                    color: @color-dark;
+                }
+            }
+
+            .category-content {
+                text-align: left;
+                float: right;
+                margin-left: -100%;
+                padding: 48px 0 0;
+                width: 100%;
+            }
+
+            @media (max-width: (@screen__m - 1)) {
+                .category-title {
+                    display: block;
+                    width: 100%;
+                }
+
+                .category-content {
+                    float: none;
+                    margin-left: 0;
+                    padding-top: 20px;
+                }
+            }
+        }
+    }
+}
+
+& when (@media-target = 'desktop') {
+    .block.featured {
+        [role="tablist"] {
+            .category-title {
+                margin: 0 0 20px 15px;
+            }
+        }
+
+        @media (min-width: @screen__xl) {
+            [role="tablist"] {
+                .category-title {
+                    font-size: 26px;
+                    margin-left: 26px;
+                }
+
+                .category-content {
+                    padding-top: 54px;
+                }
+            }
+        }
+    }
+}
+
