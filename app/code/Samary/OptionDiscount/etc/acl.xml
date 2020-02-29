@@ -13,7 +13,7 @@
                 <resource id="Magento_Backend::stores">
                     <resource id="Magento_Backend::stores_settings">
                         <resource id="Magento_Config::config">
-                            <resource id="Magento_Samary::config">
+                            <resource id="Magento_Samary::config" title="Samary">
                                 <resource id="Samary_Option::percent_config" title="Product Customer Option Percent"/>
                             </resource>
                         </resource>
