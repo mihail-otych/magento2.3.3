@@ -7,6 +7,10 @@
 -->
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:noNamespaceSchemaLocation="urn:magento:framework:Cache/etc/cache.xsd">
+    <type name="product_view" translate="label,description" instance="Kriyya\Cache\Model\Detail">
+        <label>详情页</label>
+        <description>产品详情页自定义缓存</description>
+    </type>
     <type name="option_percent" translate="label,description" instance="Samary\Cache\Model\OptionPercent">
         <label>Option Percent</label>
         <description>For the product customer option percent cache</description>
