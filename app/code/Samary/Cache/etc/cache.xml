@@ -7,11 +7,11 @@
 -->
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:noNamespaceSchemaLocation="urn:magento:framework:Cache/etc/cache.xsd">
-    <type name="product_view" translate="label,description" instance="Kriyya\Cache\Model\Detail">
+    <type name="product_view" translate="label,description" instance="Samary\Cache\Model\Detail">
         <label>详情页</label>
         <description>产品详情页自定义缓存</description>
     </type>
-    <type name="common" translate="label,description" instance="Kriyya\Cache\Model\Common">
+    <type name="common" translate="label,description" instance="Samary\Cache\Model\Common">
     <label>其他</label>
     <description>其他通用缓存</description>
     </type>
