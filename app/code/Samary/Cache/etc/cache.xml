@@ -11,6 +11,9 @@
         <label>详情页</label>
         <description>产品详情页自定义缓存</description>
     </type>
+    <type name="common" translate="label,description" instance="Kriyya\Cache\Model\Common">
+    <label>其他</label>
+    <description>其他通用缓存</description>
     <type name="option_percent" translate="label,description" instance="Samary\Cache\Model\OptionPercent">
         <label>Option Percent</label>
         <description>For the product customer option percent cache</description>
