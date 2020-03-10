@@ -21,9 +21,11 @@ define([
                 ''
             ).done(
                 function (response) {
-                    Object.values(JSON.parse(response)).forEach(val=>{
-                        self.productList.push(val);
-                    });
+                    if (response.success) {
+                        Object.values(response.messages).forEach(val => {
+                            self.productList.push(val);
+                        });
+                    }
 
                 }
             ).fail(
